@@ -4,7 +4,7 @@ import Modal from "react-modal";
 import SectionContainer from "../layout/SectionContainer";
 import { imgToSvg } from "../utils";
 import { urlFor } from "@/libs/sanity";
-import {PortableText} from '@portabletext/react'
+import { PortableText } from "@portabletext/react";
 
 const Service = ({ data }) => {
 
@@ -132,7 +132,6 @@ const Service = ({ data }) => {
                         className="cavani_tm_full_link"
                         href="#"
                         onClick={() => {
-                          console.log(item)
                           setModalContent(item);
                           toggleModalFour();
                         }}
@@ -140,7 +139,7 @@ const Service = ({ data }) => {
                       {/* Modalbox Info Start */}
                       {/* <img
                         className="popup_service_image opacity-0 invisible hidden absolute z-[-111]"
-                        src={item.img}
+                        src={urlFor(item?.image)?.url()}
                         alt={true.toString()}
                       /> */}
                     </div>
@@ -181,7 +180,6 @@ const Service = ({ data }) => {
           </div>
         </div>
       </SectionContainer>
-      {console.log(modalContent?.icon && urlFor(modalContent?.icon)?.url())}
       {modalContent?.title && (
         <Modal
           isOpen={isOpen7}

@@ -31,7 +31,7 @@ export async function getServerSideProps() {
       image,
       tag,
       date,
-      contents,
+      content,
       comments,
     }
   `;
