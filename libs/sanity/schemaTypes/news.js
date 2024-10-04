@@ -1,3 +1,4 @@
+
 export default {
   name: 'news',
   type: 'document',
@@ -13,8 +14,8 @@ export default {
       title: 'Tag',
     }, {
       name: 'date',
-      type: 'string',
       title: 'Date',
+      type: 'date',
     }, {
       name: 'comments',
       type: 'string',

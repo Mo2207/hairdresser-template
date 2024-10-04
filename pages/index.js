@@ -1,3 +1,4 @@
+import { createClient } from "next-sanity";
 import About from "@/src/components/About";
 import Particles from "@/src/components/author/Particles";
 import Contact from "@/src/components/Contact";
@@ -14,7 +15,63 @@ const Home = dynamic(() => import("@/src/components/Home"), {
   ssr: false,
 });
 
-const Index = () => {
+export async function getServerSideProps() {
+  const sanityClient = createClient({
+    // TODO: mode to the env file
+    projectId: "aw3v4mxg",
+    dataset: "production",
+    apiVersion: "2021-03-25",
+    useCdn: false,
+  });
+
+  // Fetch data from Sanity
+  const newsQuery = `
+    *[_type=='news'] {
+      title,
+      image,
+      tag,
+      date,
+      contents,
+      comments,
+    }
+  `;
+
+  const portfolioQuery = `
+    *[_type=='portfolio'] {
+      title,
+      content,
+      image,
+      youtubeLink,
+    }
+  `;
+
+  const serviceQuery = `
+    *[_type=='service'] {
+      title,
+      description,
+      icon,
+      image,
+      content,
+    }
+  `;
+  const newsData = await sanityClient.fetch(newsQuery);
+  const portfolioData = await sanityClient.fetch(portfolioQuery);
+  const serviceData = await sanityClient.fetch(serviceQuery);
+
+  return {
+    props: {
+      data: {
+        news: newsData || [],
+        portfolio: portfolioData || [],
+        service: serviceData || [],
+      },
+    },
+  };
+}
+
+const Index = ({ data }) => {
+
+  console.log(data);
   return (
     <Layout>
       <div className="cavani_tm_mainpart absolute inset-[70px] overflow-hidden middle:inset-x-0 middle:bottom-0 middle:top-[55px]">
@@ -34,13 +91,13 @@ const Index = () => {
           <About />
           {/* ABOUT */}
           {/* PORTFOLIO */}
-          <Portfolio />
+          <Portfolio data={data?.portfolio} />
           {/* /PORTFOLIO */}
           {/* SERVICE */}
-          <Service />
+          <Service data={data?.service} />
           {/* SERVICE */}
           {/* NEWS */}
-          <News />
+          <News data={data?.news} />
           {/* NEWS */}
           {/* CONTACT */}
           <Contact />
