@@ -1,9 +1,13 @@
 import { Fragment, useEffect, useState } from "react";
+import Image from "next/image";
 import Modal from "react-modal";
 import SectionContainer from "../layout/SectionContainer";
 import { imgToSvg } from "../utils";
+import { urlFor } from "@/libs/sanity";
+import {PortableText} from '@portabletext/react'
 
-const Service = () => {
+const Service = ({ data }) => {
+
   useEffect(() => {
     imgToSvg();
   }, []);
@@ -108,7 +112,41 @@ const Service = () => {
             </div>
             <div className="service_list w-full h-auto clear-both float-left mt-[60px]">
               <ul className="ml-[-50px] flex flex-wrap">
-                {services.map((item, i) => (
+                {data?.map((item, i) => (
+                  <li className="mb-[50px] w-1/2 pl-[50px]" key={i}>
+                    <div className="list_inner w-full h-auto clear-both float-left relative border-solid border-[#b9b8c3] border py-[70px] px-[40px] text-center transition-all duration-300 hover:bg-[#333]">
+                      <Image
+                        className="svg inline-block w-[60px] h-[60px] text-[#333] mb-[27px] transition-all duration-300"
+                        src={urlFor(item.icon).url()}
+                        alt={true.toString()}
+                        width={60}
+                        height={60}
+                      />
+                      <h3 className="title font-medium text-[24px] text-[#333] mb-[15px] transition-all duration-300">
+                        {item.title}
+                      </h3>
+                      <p className="text transition-all duration-300">
+                        {item.description}
+                      </p>
+                      <a
+                        className="cavani_tm_full_link"
+                        href="#"
+                        onClick={() => {
+                          console.log(item)
+                          setModalContent(item);
+                          toggleModalFour();
+                        }}
+                      />
+                      {/* Modalbox Info Start */}
+                      {/* <img
+                        className="popup_service_image opacity-0 invisible hidden absolute z-[-111]"
+                        src={item.img}
+                        alt={true.toString()}
+                      /> */}
+                    </div>
+                  </li>
+                ))}
+                {/* {services.map((item, i) => (
                   <li className="mb-[50px] w-1/2 pl-[50px]" key={i}>
                     <div className="list_inner w-full h-auto clear-both float-left relative border-solid border-[#b9b8c3] border py-[70px] px-[40px] text-center transition-all duration-300 hover:bg-[#333]">
                       <img
@@ -130,7 +168,6 @@ const Service = () => {
                           toggleModalFour();
                         }}
                       />
-                      {/* Modalbox Info Start */}
                       <img
                         className="popup_service_image opacity-0 invisible hidden absolute z-[-111]"
                         src={item.img}
@@ -138,13 +175,14 @@ const Service = () => {
                       />
                     </div>
                   </li>
-                ))}
+                ))} */}
               </ul>
             </div>
           </div>
         </div>
       </SectionContainer>
-      {modalContent && (
+      {console.log(modalContent?.icon && urlFor(modalContent?.icon)?.url())}
+      {modalContent?.title && (
         <Modal
           isOpen={isOpen7}
           onRequestClose={toggleModalFour}
@@ -165,21 +203,26 @@ const Service = () => {
                 <div className="service_popup_informations w-full h-auto clear-both float-left">
                   <div className="image">
                     <img src="assets/img/thumbs/4-2.jpg" alt={true.toString()} />
-                    <div
-                      className="main"
-                      data-img-url={modalContent.img}
-                      style={{
-                        backgroundImage: `url(${modalContent.img})`,
-                      }}
-                    />
+                    {modalContent?.image && (
+                      <div
+                        className="main"
+                        data-img-url={urlFor(modalContent?.image)?.url()}
+                        style={{
+                          backgroundImage: `url(${urlFor(modalContent?.image)?.url()})`,
+                        }}
+                      />
+                    )}
                   </div>
                   <div className="main_title">
                     <h3>{modalContent.title}</h3>
                   </div>
                   <div className="descriptions w-full float-left">
-                    <p className="mb-[15px]">{modalContent.text1}</p>
+                    {/* <p className="mb-[15px]">{modalContent.text1}</p>
                     <p className="mb-[15px]">{modalContent.text2}</p>
-                    <p>{modalContent.text3}</p>
+                    <p>{modalContent.text3}</p> */}
+                    <PortableText
+                      value={modalContent?.content}
+                    />
                   </div>
                 </div>
               </div>
