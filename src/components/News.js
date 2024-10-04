@@ -1,8 +1,10 @@
 import { Fragment, useEffect, useState } from "react";
 import Modal from "react-modal";
+import { urlFor } from "@/libs/sanity";
+import { PortableText } from "@portabletext/react";
 import SectionContainer from "../layout/SectionContainer";
 
-const News = () => {
+const News = ({ data }) => {
   useEffect(() => {
     var lists = document.querySelectorAll(".news_list > ul > li");
     let box = document.querySelector(".cavani_fn_moving_box");
@@ -130,6 +132,60 @@ const News = () => {
             </div>
             <div className="news_list w-full h-auto clear-both float-left mt-[60px]">
               <ul className="relative z-[2]">
+                {data.map((item, i) => {
+                  return (
+                    <li
+                      className="w-full py-[29px] px-0"
+                      data-img={urlFor(item?.image)?.url()}
+                      key={i}
+                    >
+                      <div className="list_inner w-full clear-both h-auto flex items-center">
+                        <span className="number w-[50px] min-w-[50px] h-[50px] text-center leading-[50px] inline-block rounded-full bg-[#b9b8c3] text-[#333] text-[16px] font-semibold font-poppins">
+                          {`${i <= 9 ? 0 : ""}${i + 1}`}
+                        </span>
+                        <div className="details relative pl-[30px] ml-[29px]">
+                          <div className="extra_metas">
+                            <ul className="flex items-center flex-wrap mb-[2px]">
+                              <li className="relative mr-[10px]">
+                                <span className="text-[15px] text-[#777]">
+                                  {item.date}
+                                </span>
+                              </li>
+                              <li className="relative mr-[10px]">
+                                <span className="text-[15px] text-[#777] pl-[10px]">
+                                  <a
+                                    className="text-[#777] transition-all duration-300 hover:text-[#000]"
+                                    href="#"
+                                    onClick={() => toggleModalFour(item)}
+                                  >
+                                    {item.tag}
+                                  </a>
+                                </span>
+                              </li>
+                              <li className="relative mr-[10px]">
+                                <span className="text-[15px] text-[#777] pl-[10px]">
+                                  <a
+                                    className="text-[#777] transition-all duration-300 hover:text-[#000]"
+                                    href="#"
+                                  >
+                                    {item.comments}
+                                  </a>
+                                </span>
+                              </li>
+                            </ul>
+                          </div>
+                          <div className="post_title">
+                            <h3 className="m-0 p-0 leading-[1] font-semibold">
+                              <a href="#" onClick={() => toggleModalFour(item)}>
+                                {item.title}
+                              </a>
+                            </h3>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  )
+                })}
                 {newsData.map((news, i) => (
                   <li
                     className="w-full py-[29px] px-0"
@@ -206,20 +262,22 @@ const News = () => {
               </div>
               <div className="description_wrap">
                 <div className="news_popup_informations w-full h-auto clear-both float-left">
-                  <div className="image">
-                    <img src="assets/img/thumbs/4-2.jpg" alt={true.toString()} />
-                    <div
-                      className="main"
-                      data-img-url={modalContent.img}
-                      style={{ backgroundImage: `url(${modalContent.img})` }}
-                    />
-                  </div>
+                  {modalContent?.image && (
+                    <div className="image">
+                      <img src={urlFor(modalContent?.image)?.url()} alt={true.toString()} />
+                      <div
+                        className="main"
+                        data-img-url={urlFor(modalContent?.image)?.url()}
+                        style={{ backgroundImage: `url(${urlFor(modalContent?.image)?.url()})` }}
+                      />
+                    </div>
+                  )}
                   <div className="details">
                     <div className="meta">
                       <ul className="flex items-center flex-wrap mb-[2px]">
                         <li className="relative mr-[10px]">
                           <span className="text-[15px] text-[#777]">
-                            July 07, 2022
+                          {modalContent.date}
                           </span>
                         </li>
                         <li className="relative mr-[10px]">
@@ -228,7 +286,7 @@ const News = () => {
                               className="text-[#777] transition-all duration-300 hover:text-[#000]"
                               href="#"
                             >
-                              Branding
+                              {modalContent.tag}
                             </a>
                           </span>
                         </li>
@@ -238,7 +296,7 @@ const News = () => {
                               className="text-[#777] transition-all duration-300 hover:text-[#000]"
                               href="#"
                             >
-                              0 Comments
+                              {modalContent.comments}
                             </a>
                           </span>
                         </li>
@@ -250,9 +308,12 @@ const News = () => {
                     <div />
                   </div>
                   <div className="text w-full float-left">
-                    <p className="mb-[15px]">{modalContent.text1}</p>
+                    {/* <p className="mb-[15px]">{modalContent.text1}</p>
                     <p className="mb-[15px]">{modalContent.text2}</p>
-                    <p>{modalContent.text3}</p>
+                    <p>{modalContent.text3}</p> */}
+                    <PortableText
+                      value={modalContent?.content}
+                    />
                   </div>
                 </div>
               </div>
