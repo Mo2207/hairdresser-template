@@ -1,4 +1,5 @@
-import { createContext, useCallback, useReducer } from "react";
+import { createContext, useCallback, useReducer, useEffect } from "react";
+import { useRouter } from 'next/router';
 
 // Create Context
 const CavaniContext = createContext();
@@ -22,7 +23,7 @@ const reducer = (state, action) => {
   switch (type) {
     case NAV:
       return {
-        ...state,
+        ...state, 
         nav: payload,
       };
     case ANIMATION:
@@ -38,6 +39,17 @@ const reducer = (state, action) => {
 // Watson State
 const CavaniState = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
+  const router = useRouter();
+
+  useEffect(() => {
+    const hash = router.asPath.split('#')[1]
+    if (hash) {
+      dispatch({
+        type: NAV,
+        payload: hash,
+      });
+    }
+  }, []);
 
   const navChange = useCallback((value) => {
     dispatch({

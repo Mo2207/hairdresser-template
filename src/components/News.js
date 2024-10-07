@@ -21,7 +21,7 @@ const News = ({ data }) => {
         var imgURL = list.getAttribute("data-img");
         box.style.backgroundImage = `url(${imgURL})`;
         box.style.top = event.clientY - 50 + "px";
-        console.log(event.clientY);
+
         if (imgURL === "") {
           box.classList.remove("opened");
           return false;
@@ -132,7 +132,7 @@ const News = ({ data }) => {
             </div>
             <div className="news_list w-full h-auto clear-both float-left mt-[60px]">
               <ul className="relative z-[2]">
-                {data.map((item, i) => {
+                {data?.map((item, i) => {
                   return (
                     <li
                       className="w-full py-[29px] px-0"
@@ -162,16 +162,6 @@ const News = ({ data }) => {
                                   </a>
                                 </span>
                               </li>
-                              <li className="relative mr-[10px]">
-                                <span className="text-[15px] text-[#777] pl-[10px]">
-                                  <a
-                                    className="text-[#777] transition-all duration-300 hover:text-[#000]"
-                                    href="#"
-                                  >
-                                    {item.comments}
-                                  </a>
-                                </span>
-                              </li>
                             </ul>
                           </div>
                           <div className="post_title">
@@ -186,7 +176,7 @@ const News = ({ data }) => {
                     </li>
                   )
                 })}
-                {newsData.map((news, i) => (
+                {/* {newsData.map((news, i) => (
                   <li
                     className="w-full py-[29px] px-0"
                     data-img={news.img}
@@ -237,7 +227,7 @@ const News = ({ data }) => {
                       </div>
                     </div>
                   </li>
-                ))}
+                ))} */}
               </ul>
             </div>
           </div>

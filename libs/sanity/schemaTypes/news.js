@@ -17,10 +17,6 @@ export default {
       title: 'Date',
       type: 'date',
     }, {
-      name: 'comments',
-      type: 'string',
-      title: 'Comments',
-    }, {
       name: 'image',
       type: 'image',
       title: 'Image',
