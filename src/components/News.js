@@ -35,6 +35,7 @@ const News = ({ data }) => {
 
   const [isOpen4, setIsOpen4] = useState(false);
   const [modalContent, setModalContent] = useState({});
+
   function toggleModalFour(value) {
     setIsOpen4(!isOpen4);
     setModalContent(value);
@@ -176,58 +177,6 @@ const News = ({ data }) => {
                     </li>
                   )
                 })}
-                {/* {newsData.map((news, i) => (
-                  <li
-                    className="w-full py-[29px] px-0"
-                    data-img={news.img}
-                    key={i}
-                  >
-                    <div className="list_inner w-full clear-both h-auto flex items-center">
-                      <span className="number w-[50px] min-w-[50px] h-[50px] text-center leading-[50px] inline-block rounded-full bg-[#b9b8c3] text-[#333] text-[16px] font-semibold font-poppins">
-                        {`${i <= 9 ? 0 : ""}${i + 1}`}
-                      </span>
-                      <div className="details relative pl-[30px] ml-[29px]">
-                        <div className="extra_metas">
-                          <ul className="flex items-center flex-wrap mb-[2px]">
-                            <li className="relative mr-[10px]">
-                              <span className="text-[15px] text-[#777]">
-                                {news.date}
-                              </span>
-                            </li>
-                            <li className="relative mr-[10px]">
-                              <span className="text-[15px] text-[#777] pl-[10px]">
-                                <a
-                                  className="text-[#777] transition-all duration-300 hover:text-[#000]"
-                                  href="#"
-                                  onClick={() => toggleModalFour(news)}
-                                >
-                                  Branding
-                                </a>
-                              </span>
-                            </li>
-                            <li className="relative mr-[10px]">
-                              <span className="text-[15px] text-[#777] pl-[10px]">
-                                <a
-                                  className="text-[#777] transition-all duration-300 hover:text-[#000]"
-                                  href="#"
-                                >
-                                  0 Comments
-                                </a>
-                              </span>
-                            </li>
-                          </ul>
-                        </div>
-                        <div className="post_title">
-                          <h3 className="m-0 p-0 leading-[1] font-semibold">
-                            <a href="#" onClick={() => toggleModalFour(news)}>
-                              {news.title}
-                            </a>
-                          </h3>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                ))} */}
               </ul>
             </div>
           </div>
@@ -263,35 +212,27 @@ const News = ({ data }) => {
                     </div>
                   )}
                   <div className="details">
-                    <div className="meta">
-                      <ul className="flex items-center flex-wrap mb-[2px]">
-                        <li className="relative mr-[10px]">
-                          <span className="text-[15px] text-[#777]">
-                          {modalContent.date}
-                          </span>
-                        </li>
-                        <li className="relative mr-[10px]">
-                          <span className="text-[15px] text-[#777] pl-[10px]">
-                            <a
-                              className="text-[#777] transition-all duration-300 hover:text-[#000]"
-                              href="#"
-                            >
-                              {modalContent.tag}
-                            </a>
-                          </span>
-                        </li>
-                        <li className="relative mr-[10px]">
-                          <span className="text-[15px] text-[#777] pl-[10px]">
-                            <a
-                              className="text-[#777] transition-all duration-300 hover:text-[#000]"
-                              href="#"
-                            >
-                              {modalContent.comments}
-                            </a>
-                          </span>
-                        </li>
-                      </ul>
-                    </div>
+                    {modalContent?.date && (
+                      <div className="meta">
+                        <ul className="flex items-center flex-wrap mb-[2px]">
+                          <li className="relative mr-[10px]">
+                            <span className="text-[15px] text-[#777]">
+                            {modalContent.date}
+                            </span>
+                          </li>
+                          <li className="relative mr-[10px]">
+                            <span className="text-[15px] text-[#777] pl-[10px]">
+                              <a
+                                className="text-[#777] transition-all duration-300 hover:text-[#000]"
+                                href="#"
+                              >
+                                {modalContent.tag}
+                              </a>
+                            </span>
+                          </li>
+                        </ul>
+                      </div>
+                    )}
                     <div className="title">
                       <h3>{modalContent.title}</h3>
                     </div>

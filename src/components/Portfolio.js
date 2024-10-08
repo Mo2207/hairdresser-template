@@ -1,12 +1,16 @@
 import Isotope from "isotope-layout";
 import dynamic from "next/dynamic";
+import Modal from "react-modal";
 import { Fragment, useEffect, useRef, useState } from "react";
 import SectionContainer from "../layout/SectionContainer";
 import { dataImage } from "../utils";
 import ImageView from "./ImagePopup";
+import { urlFor } from "@/libs/sanity";
 import { Detail, Soundcloud } from "./Popup";
+import { PortableText } from "@portabletext/react";
 
-const Portfolio = () => {
+const Portfolio = ({ data }) => {
+  const categories = ['Eyebrow Wax', 'Eyebrow Tint & Shape', 'Eyebrows Lamination', 'Eyelash Lift and Tint', 'Classic Fill', 'Classic Full Set'];
   const ModalVideo = dynamic(
     () => {
       return import("react-modal-video");
@@ -70,11 +74,20 @@ const Portfolio = () => {
     }, 2000);
   });
 
+  const [modalContent, setModalContent] = useState({});
+  const [category, setCategory] = useState(null);
+  const filteredData = category ? data.filter(item => item.category === category) : data;
   const [isOpen, setIsOpen] = useState(false);
   const [isOpen2, setIsOpen2] = useState(false);
   const [isOpen3, setIsOpen3] = useState(false);
   const [isOpen4, setIsOpen4] = useState(false);
+  // Modal with title, image and content
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
+  function toggleModal(value) {
+    setIsModalOpen(!isModalOpen);
+    setModalContent(value);
+  }
   function toggleModalThree() {
     setIsOpen3(!isOpen3);
   }
@@ -117,18 +130,22 @@ const Portfolio = () => {
             <div className="portfolio_filter w-full h-auto clear-both float-left text-left relative px-0 pt-[55px] pb-[42px]">
               <ul>
                 <li className="mr-[40px] inline-block">
-                  <a
+                  {/* <a
                     href="#"
-                    className={`current text-[#333] font-poppins font-medium transition-all duration-300 ${activeBtn(
-                      "*"
-                    )}`}
+                    className={`current text-[#333] font-poppins font-medium transition-all duration-300 ${activeBtn("*")}`}
                     data-filter="*"
                     onClick={handleFilterKeyChange("*")}
                   >
                     All
-                  </a>
+                  </a> */}
+                  <button
+                    className={`current text-[#333] font-poppins font-medium transition-all duration-300 ${category === null && 'underline'}`}
+                    onClick={() => setCategory(null)}
+                  >
+                    All
+                  </button>
                 </li>
-                <li className="mr-[40px] inline-block">
+                {/* <li className="mr-[40px] inline-block">
                   <a
                     href="#"
                     className={`text-[#333] font-poppins font-medium transition-all duration-300 ${activeBtn(
@@ -187,24 +204,43 @@ const Portfolio = () => {
                   >
                     Classic Fill
                   </a>
-                </li>
-                <li className="inline-block">
-                  <a
-                    href="#"
-                    className={`text-[#333] font-poppins font-medium transition-all duration-300 ${activeBtn(
-                      "detail"
-                    )}`}
-                    data-filter=".detail"
-                    onClick={handleFilterKeyChange("detail")}
-                  >
-                    Classic Full Set
-                  </a>
-                </li>
+                </li> */}
+                {categories.map((item, i) => (
+                  <li key={`category-${i}`} className="inline-block">
+                    <button
+                      key={`category-${i}`}
+                      className={`text-[#333] font-poppins font-medium transition-all duration-300 ${category === item && 'underline'}`}
+                      onClick={() => setCategory(item)}
+                    >{item}</button>
+                  </li>
+                ))}
               </ul>
             </div>
             <div className="portfolio_list w-full h-auto clear-both float-left">
               <ul className="gallery_zoom ml-[-50px]">
-                <li className="youtube mb-[50px] w-1/2 float-left pl-[50px] item__">
+                {filteredData?.map((item, i) => {
+                  return (
+                    <li key={`portfolio-${i}`} className="youtube mb-[50px] w-1/2 float-left pl-[50px] item__">
+                      <button onClick={() => toggleModal(item)}>
+                      <div className="list_inner w-full h-auto clear-both float-left relative overflow-hidden">
+                        <div className="image relative">
+                          <img
+                            className="relative min-w-full"
+                            src={urlFor(item?.image)?.url()}
+                            alt={true.toString()}
+                          />
+                          <div className="details">
+                            <h3 className="text-[16px] mb-[2px] font-semibold">
+                              {item.title}
+                            </h3>
+                          </div>
+                        </div>
+                      </div>
+                      </button>
+                    </li> 
+                  )
+                })}
+                {/* <li className="youtube mb-[50px] w-1/2 float-left pl-[50px] item__">
                   <div className="list_inner w-full h-auto clear-both float-left relative overflow-hidden">
                     <div className="image relative">
                       <img
@@ -229,13 +265,62 @@ const Portfolio = () => {
                       />
                     </div>
                   </div>
-                </li>
+                </li> */}
                 {/* Остальные элементы галереи */}
               </ul>
             </div>
           </div>
         </div>
       </SectionContainer>
+      {modalContent && (
+        <Modal
+          isOpen={isModalOpen}
+          onRequestClose={toggleModal}
+          contentLabel="Portfolio"
+          className="mymodal"
+          overlayClassName="myoverlay"
+          closeTimeoutMS={300}
+          openTimeoutMS={300}
+        >
+          <div className="cavani_tm_modalbox opened">
+            <div className="box_inner">
+              <div className="close">
+                <a href="#" onClick={toggleModal}>
+                  <i className="icon-cancel" />
+                </a>
+              </div>
+              <div className="description_wrap">
+                <div className="news_popup_informations w-full h-auto clear-both float-left">
+                  {modalContent?.image && (
+                    <div className="image">
+                      <img src={urlFor(modalContent?.image)?.url()} alt={true.toString()} />
+                      <div
+                        className="main"
+                        data-img-url={urlFor(modalContent?.image)?.url()}
+                        style={{ backgroundImage: `url(${urlFor(modalContent?.image)?.url()})` }}
+                      />
+                    </div>
+                  )}
+                  <div className="details">
+                    <div className="title">
+                      <h3>{modalContent.title}</h3>
+                    </div>
+                    <div />
+                  </div>
+                  <div className="text w-full float-left">
+                    {/* <p className="mb-[15px]">{modalContent.text1}</p>
+                    <p className="mb-[15px]">{modalContent.text2}</p>
+                    <p>{modalContent.text3}</p> */}
+                    <PortableText
+                      value={modalContent?.content}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Modal>
+      )}
     </Fragment>
   );
 };

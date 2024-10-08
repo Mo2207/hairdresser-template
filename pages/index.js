@@ -40,7 +40,7 @@ export async function getServerSideProps() {
       title,
       content,
       image,
-      youtubeLink,
+      category,
     }
   `;
 
