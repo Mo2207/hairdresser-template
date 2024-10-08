@@ -12,10 +12,6 @@ export default {
       type: 'image',
       title: 'Image',
     }, {
-      name: 'youtubeLink',
-      type: 'string',
-      title: 'Youtube link',
-    }, {
       name: 'content',
       type: 'array',
       title: 'Content',
@@ -24,6 +20,13 @@ export default {
           type: 'block'
         }
       ]
-    } 
+    }, {
+      name: 'category',
+      type: 'string',
+      title: 'Category',
+      options: {
+        list: ['Eyebrow Wax', 'Eyebrow Tint & Shape', 'Eyebrows Lamination', 'Eyelash Lift and Tint', 'Classic Fill', 'Classic Full Set']
+      }
+    }
   ]
 }

@@ -32,7 +32,6 @@ export async function getServerSideProps() {
       tag,
       date,
       content,
-      comments,
     }
   `;
 
@@ -41,7 +40,7 @@ export async function getServerSideProps() {
       title,
       content,
       image,
-      youtubeLink,
+      category,
     }
   `;
 
@@ -70,8 +69,6 @@ export async function getServerSideProps() {
 }
 
 const Index = ({ data }) => {
-
-  console.log(data);
   return (
     <Layout>
       <div className="cavani_tm_mainpart absolute inset-[70px] overflow-hidden middle:inset-x-0 middle:bottom-0 middle:top-[55px]">

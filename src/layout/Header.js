@@ -17,6 +17,7 @@ const navs = [
 const Header = () => {
   const { navChange, nav: activeNav } = useContext(CavaniContext);
   const [toggle, setToggle] = useState(false);
+
   return (
     <Fragment>
       <div className="cavani_tm_topbar fixed top-0 left-0 right-0 h-[50px] bg-white z-[15] hidden middle:block">
@@ -155,7 +156,7 @@ const Header = () => {
                 <a
                   onClick={() => navChange(nav.href)}
                   className="text-[#333] font-poppins font-medium py-0 px-[30px] inline-block transition-all duration-300"
-                  href={`#${nav.href}`}
+                  href={`/#${nav.href}`}
                 >
                   {nav.name}
                 </a>
