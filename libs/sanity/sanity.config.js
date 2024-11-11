@@ -8,6 +8,7 @@ export default defineConfig({
   name: 'default',
   title: 'od-teams',
 
+  // TODO: mode to the env file
   projectId: 'aw3v4mxg',
   dataset: 'production',
 
