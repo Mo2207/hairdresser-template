@@ -144,7 +144,7 @@ const Header = () => {
             <span className="relative top-[2px]">OD-Studio</span>
           </a>
         </div>
-        <div className="menu relative">
+        <div className="menu relative middle:hidden">
           <ul className="transition_link">
             {navs.map((nav) => (
               <li
