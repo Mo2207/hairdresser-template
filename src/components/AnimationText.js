@@ -26,7 +26,7 @@ const TypingAnimation = () => {
       <span className="cd-headline clip">
         {" "}
         {/* ANIMATE TEXT VALUES: zoom, rotate-1, letters type, letters rotate-2, loading-bar, slide, clip, letters rotate-3, letters scale, push,  */}
-        <span className="blc">Creative</span>{" "}
+        <span className="blc relative">Creative</span>{" "}
         <span className="cd-words-wrapper">
           <b className="is-visible" ref={el}></b>
         </span>

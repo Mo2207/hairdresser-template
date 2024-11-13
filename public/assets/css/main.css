@@ -1483,8 +1483,8 @@ h6 {
     height: 60px;
     padding-top: 0px;
     padding-bottom: 0px;
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: 70px;
+    padding-right: 70px;
     line-height: 60px;
   }
 
@@ -1523,6 +1523,7 @@ h6 {
   }
 
   .cavani_tm_home .name {
+    position: relative;
     margin-bottom: 25px;
     font-size: 55px;
   }
@@ -1689,7 +1690,9 @@ h6 {
   }
 
   .cavani_tm_mainpart .author_image {
-    display: none;
+    /* display: none; */
+    width: 100%;
+    z-index: 0;
   }
 
   .cavani_tm_mainpart .main_content {
@@ -1778,6 +1781,7 @@ h6 {
     padding-right: 20px;
     padding-top: 57px;
     padding-bottom: 0px;
+    background: #f6fbff;
   }
 }
 
@@ -1941,6 +1945,11 @@ h6 {
 /******  Small  *******/
 
 @media (max-width: 768px) {
+
+  .cavani_tm_footer {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
   .cavani_tm_home .name {
     font-size: 40px;
   }

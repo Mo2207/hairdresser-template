@@ -1,4 +1,5 @@
 import { Fragment, useContext, useState } from "react";
+import Link from "next/link";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -24,20 +25,20 @@ const Header = () => {
         <div className="topbar_inner w-full h-full clear-both flex items-center justify-between py-0 px-[20px]">
           <div className="logo" data-type="image">
             {" "}
-            {/* You can use text or image as logo. data-type values are: "image" and "text"  */}
-            <a className="image" href="#">
+            <Link className="image" href="/#home" onClick={() => navChange('home')}>
               <img
                 className="max-w-[110px] max-h-[65px]"
                 src="assets/img/logo/od-logo.png"
                 alt={true.toString()}
               />
-            </a>
-            <a
+            </Link>
+            <Link
+              onClick={() => navChange('home')}
               className="text text-black uppercase font-poppins text-[22px] font-extrabold tracking-[2px] leading-[50px]"
-              href="#"
+              href="/#home"
             >
               <span>OD-Studio</span>
-            </a>
+            </Link>
           </div>
           <div className="trigger relative top-[5px]">
             <div
@@ -100,7 +101,7 @@ const Header = () => {
                     />
                   </a>
                 </li>
-                <li className="mr-[8px] inline-block">
+                <li className="inline-block">
                   <a className="text-[#333]" href="#">
                     <img
                       className="svg"
@@ -109,7 +110,7 @@ const Header = () => {
                     />
                   </a>
                 </li>
-                <li className="inline-block">
+                {/* <li className="inline-block">
                   <a className="text-[#333]" href="#">
                     <img
                       className="svg"
@@ -117,12 +118,12 @@ const Header = () => {
                       alt={true.toString()}
                     />
                   </a>
-                </li>
+                </li> */}
               </ul>
             </div>
-            <div className="copyright w-full float-left">
+            {/* <div className="copyright w-full float-left">
               <p className="text-[#333] font-poppins">Copyright © 2024</p>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
@@ -130,19 +131,20 @@ const Header = () => {
         <div className="logo" data-type="image">
           {" "}
           {/* You can use text or image as logo. data-type values are: "image" and "text"  */}
-          <a className="image" href="#">
+          <Link className="image" href="/#home" onClick={() => navChange('home')}>
             <img
-              className="max-w-[110px] max-h-[65px] inline-block"
+              className="max-w-[110px] max-h-[65px] inline-block middle:none"
               src="assets/img/logo/od-logo.png"
               alt={true.toString()}
             />
-          </a>
-          <a
+          </Link>
+          <Link
+            onClick={() => navChange('home')}
             className="text no-underline text-black uppercase font-poppins text-[25px] font-extrabold tracking-[2px] leading-[70px]"
-            href="#"
+            href="/#home"
           >
             <span className="relative top-[2px]">OD-Studio</span>
-          </a>
+          </Link>
         </div>
         <div className="menu relative middle:hidden">
           <ul className="transition_link">
