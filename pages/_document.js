@@ -8,7 +8,7 @@ export default function Document() {
         {/* <link rel="icon" href="assets/img/favicon.ico" /> */}
         <meta
           name="description"
-          content="Lash & Brow Design Studio by Olesia Demenshyna"
+          content="Lash & Brow Design Studio"
         />
         <meta name="author" content="The Clicks" />
         <link
