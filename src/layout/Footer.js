@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <div className="cavani_tm_footer fixed inset-x-0 bottom-0 bg-white z-[10] h-[70px] leading-[70px] flex items-center justify-between py-0 px-[70px] middle:hidden">
+    <div className="cavani_tm_footer fixed inset-x-0 bottom-0 bg-white z-[10] h-[70px] leading-[70px] flex items-center justify-between py-0">
       <div className="copyright">
         <p className="text-[#333] font-poppins">Copyright © 2024</p>
       </div>
@@ -15,7 +15,7 @@ const Footer = () => {
               />
             </a>
           </li>
-          <li className="mr-[15px] inline-block">
+          <li className="inline-block">
             <a className="text-[#333]" href="#">
               <img
                 className="svg inline-block"
@@ -24,7 +24,7 @@ const Footer = () => {
               />
             </a>
           </li>
-          <li className="inline-block">
+          {/* <li className="inline-block">
             <a className="text-[#333]" href="#">
               <img
                 className="svg inline-block"
@@ -32,7 +32,7 @@ const Footer = () => {
                 alt={true.toString()}
               />
             </a>
-          </li>
+          </li> */}
         </ul>
       </div>
     </div>

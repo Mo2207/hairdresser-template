@@ -64,13 +64,13 @@ const About = () => {
               </div>
               <div className="right w-[50%]">
                 <ul>
-                  <li className="mb-[8px] w-full float-left">
+                  <li className="mb-[8px] w-full float-left flex">
                     <span className="first inline-block min-w-[100px] font-bold">
                       Name:
                     </span>
                     <span className="second inline-block">Olesia Demenshyna</span>
                   </li>
-                  <li className="mb-[8px] w-full float-left">
+                  <li className="mb-[8px] w-full float-left flex">
                     <span className="first inline-block min-w-[100px] font-bold">
                       Address:
                     </span>
@@ -78,7 +78,7 @@ const About = () => {
                       191 Elsliger St, Dieppe, NB, CA
                     </span>
                   </li>
-                  <li className="mb-[8px] w-full float-left">
+                  <li className="mb-[8px] w-full float-left flex">
                     <span className="first inline-block min-w-[100px] font-bold">
                       Study:
                     </span>
@@ -86,7 +86,7 @@ const About = () => {
                       Beauty Academy "World of Beauty" by Nataliia Morozova
                     </span>
                   </li>
-                  <li className="mb-[8px] w-full float-left">
+                  <li className="mb-[8px] w-full float-left flex">
                     <span className="first inline-block min-w-[100px] font-bold">
                       Degree:
                     </span>
@@ -94,7 +94,7 @@ const About = () => {
                       Lash and Brow Designer
                     </span>
                   </li>
-                  <li className="mb-[8px] w-full float-left">
+                  <li className="mb-[8px] w-full float-left flex">
                     <span className="first inline-block min-w-[100px] font-bold">
                       Mail:
                     </span>

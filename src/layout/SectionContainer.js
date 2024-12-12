@@ -7,6 +7,8 @@ const SectionContainer = ({ navName, children }) => {
     <div
       className={`cavani_tm_section ${
         nav == navName ? `animated active ${animation}` : "hidden"
+      } ${
+        navName !== "home" ? 'medium:bg-white' : 'bg-block '
       }`}
       id={navName}
     >
