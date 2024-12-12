@@ -3,7 +3,7 @@ const CavaniHead = () => {
   return (
     <Head>
       <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-      <meta name="description" content="Lash & Brow Design Studio by" />
+      <meta name="description" content="Lash & Brow Design Studio" />
       <meta name="author" content="Marketify" />
       <meta
         name="viewport"
