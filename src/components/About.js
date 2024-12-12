@@ -184,7 +184,7 @@ const About = () => {
               </div>
             </div>
           </div>
-          <div className="skills w-full h-auto clear-both float-left mb-[65px]">
+          <div className="skills w-full h-auto clear-both float-left">
             <div className="wrapper w-full h-auto clear-both float-left flex justify-between">
               <div className="programming w-[40%]">
                 <div className="cavani_tm_title w-full h-auto clear-both float-left overflow-hidden">
