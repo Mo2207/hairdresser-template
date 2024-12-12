@@ -9,7 +9,7 @@ const CavaniHead = () => {
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>Lash & Brow Design Studio by | Home</title>
+      <title>Lash & Brow Design Studio | Home</title>
     </Head>
   );
 };
