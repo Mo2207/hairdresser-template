@@ -53,7 +53,7 @@ const About = () => {
             <div className="wrapper w-full h-auto clear-both float-left flex justify-between mt-[55px]">
               <div className="left w-[40%]">
                 <p className="mb-[15px]">
-                  Hello! My name is <strong>Olesia Demenshyna.</strong> I am a lash and brow designer. 
+                  Hello! My name is <strong>Amanda Tregallis</strong> I am a lash and brow designer. 
                   I recently completed professional courses and am now excited to apply my newly acquired 
                   skills in practice.
                 </p>
@@ -68,14 +68,14 @@ const About = () => {
                     <span className="first inline-block min-w-[100px] font-bold">
                       Name:
                     </span>
-                    <span className="second inline-block">Olesia Demenshyna</span>
+                    <span className="second inline-block">Amanda Tregallis</span>
                   </li>
                   <li className="mb-[8px] w-full float-left flex">
                     <span className="first inline-block min-w-[100px] font-bold">
                       Address:
                     </span>
                     <span className="second inline-block">
-                      191 Elsliger St, Dieppe, NB, CA
+                      22 Champlain Blvd, Dieppe, NB, CA
                     </span>
                   </li>
                   <li className="mb-[8px] w-full float-left flex">
@@ -83,7 +83,7 @@ const About = () => {
                       Study:
                     </span>
                     <span className="second inline-block">
-                      Beauty Academy "World of Beauty" by Nataliia Morozova
+                      Beauty Academy "World of Beauty"
                     </span>
                   </li>
                   <li className="mb-[8px] w-full float-left flex">
@@ -103,7 +103,7 @@ const About = () => {
                         className="text-[#7d7789] transition-all duration-300 hover:text-[#333]"
                         href="#"
                       >
-                        o.demenshyna@gmail.com
+                        amandatregallis@gmail.com
                       </a>
                     </span>
                   </li>
@@ -112,7 +112,7 @@ const About = () => {
                       Phone:
                     </span>
                     <span className="second inline-block">
-                      +1 506 759 4734
+                      +1 506 111 1111
                     </span>
                   </li>
                 </ul>
@@ -203,7 +203,7 @@ const About = () => {
                   ))}
                 </div>
               </div>
-              <div className="language w-[50%]">
+              {/* <div className="language w-[50%]">
                 <div className="cavani_tm_title w-full h-auto clear-both float-left overflow-hidden">
                   <span className="inline-block relative font-poppins text-[#333] uppercase font-bold tracking-[8px]">
                     Language
@@ -237,7 +237,7 @@ const About = () => {
                     ))}
                   </ul>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
           <div className="resume w-full h-auto clear-both float-left mb-[75px]">
@@ -260,7 +260,7 @@ const About = () => {
                           </div>
                           <div className="place w-1/2 pl-[20px]">
                             <h3 className="text-[16px] mb-[2px] font-semibold">
-                            Beauty Academy "World of Beauty" by Nataliia Morozova
+                              Beauty Academy "World of Beauty"
                             </h3>
                             <span className="text-[14px]">Certificate</span>
                           </div>
@@ -275,7 +275,7 @@ const About = () => {
                           </div>
                           <div className="place w-1/2 pl-[20px]">
                             <h3 className="text-[16px] mb-[2px] font-semibold">
-                              Mikailova School
+                              Beauty Academy
                             </h3>
                             <span className="text-[14px]">Certificate</span>
                           </div>

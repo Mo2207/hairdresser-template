@@ -38,7 +38,7 @@ const Home = () => {
         <div className="content pl-[100px] relative">
           {/* <div className="hidden middle:block bg-block" /> */}
           <h3 className="name text-[72px] font-bold uppercase mb-[30px]">
-            Olesia Demenshyna
+            Amanda Tregallis
           </h3>
           <span className="line inline-block w-[70px] h-[5px] bg-[#333] mb-[30px] relative" />
           <TypingAnimation />

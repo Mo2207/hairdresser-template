@@ -18,7 +18,7 @@ const Contact = () => {
                     src="assets/img/svg/location.svg"
                     alt={true.toString()}
                   />
-                  <span className="block">191 Elsliger St, Dieppe, NB, CA</span>
+                  <span className="block">22 Champlain Blvd, Dieppe, NB, CA</span>
                 </div>
               </li>
               <li className="mb-[30px] w-1/3 pl-[30px]">
@@ -33,7 +33,7 @@ const Contact = () => {
                       className="text-[#7d7789] transition-all duration-300 hover:text-[#333]"
                       href="#"
                     >
-                      o.demenshyna@gmail.com
+                      amandatregallis@gmail.com
                     </a>
                   </span>
                 </div>
@@ -45,7 +45,7 @@ const Contact = () => {
                     src="assets/img/svg/call.svg"
                     alt={true.toString()}
                   />
-                  <span className="block">+1 506 759 4734</span>
+                  <span className="block">+1 506 111 1111</span>
                 </div>
               </li>
             </ul>
@@ -110,7 +110,7 @@ const Contact = () => {
                       width="100%"
                       height={355}
                       id="gmap_canvas"
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2767.912695043826!2d-64.69504152225693!3d46.07278197109058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ca0bb786c20acf9%3A0x3222ce8c585740dd!2s191%20Elsliger%20St%2C%20Dieppe%2C%20NB%20E1A%208P5!5e0!3m2!1sen!2sca!4v1727745453390!5m2!1sen!2sca"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2766.912847479311!2d-64.76157692331518!3d46.09271459128385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ca0b94bfebbe16d%3A0xe1adea99c866c408!2s22%20Champlain%20St%2C%20Dieppe%2C%20NB%20E1A%201N4!5e0!3m2!1sen!2sca!4v1734026736861!5m2!1sen!2sca"
                       frameBorder={0}
                       scrolling="no"
                       marginHeight={0}

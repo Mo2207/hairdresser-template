@@ -5,7 +5,7 @@ export default function Document() {
     <Html>
       <Head>
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-        <link rel="icon" href="assets/img/favicon.ico" />
+        {/* <link rel="icon" href="assets/img/favicon.ico" /> */}
         <meta
           name="description"
           content="Lash & Brow Design Studio by Olesia Demenshyna"

@@ -26,11 +26,12 @@ const Header = () => {
           <div className="logo" data-type="image">
             {" "}
             <Link className="image" href="/#home" onClick={() => navChange('home')}>
-              <img
+              {/* <img
                 className="max-w-[110px] max-h-[65px]"
                 src="assets/img/logo/od-logo.png"
                 alt={true.toString()}
-              />
+              /> */}
+              YOUR LOGO
             </Link>
             <Link
               onClick={() => navChange('home')}
@@ -132,11 +133,12 @@ const Header = () => {
           {" "}
           {/* You can use text or image as logo. data-type values are: "image" and "text"  */}
           <Link className="image" href="/#home" onClick={() => navChange('home')}>
-            <img
+            {/* <img
               className="max-w-[110px] max-h-[65px] inline-block middle:none"
               src="assets/img/logo/od-logo.png"
               alt={true.toString()}
-            />
+            /> */}
+            YOUR LOGO
           </Link>
           <Link
             onClick={() => navChange('home')}

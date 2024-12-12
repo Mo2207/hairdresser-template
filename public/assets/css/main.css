@@ -1443,6 +1443,11 @@ h6 {
 
 /******  Larger  *******/
 
+.cavani_tm_footer {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
 @media (max-width: 1600px) {
   body {
     font-size: 15px;
@@ -1496,6 +1501,8 @@ h6 {
     padding-left: 70px;
     padding-right: 70px;
     line-height: 60px;
+    max-width: 1500px;
+    margin: 0 auto;
   }
 
   .cavani_tm_left_border {
@@ -1623,7 +1630,7 @@ h6 {
     padding-bottom: 20px;
     padding-left: 10px;
     padding-right: 10px;
-    border-radius: 0.75rem;
+    border-radius: 15px;
   }
 
   .cavani_tm_modalbox .box_inner {

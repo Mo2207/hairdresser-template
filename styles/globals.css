@@ -36,7 +36,7 @@
 .cavani_tm_header .menu ul li a:hover:after,
 .cavani_tm_header .menu ul li.active a:after {
   width: 100%;
-  border-radius: 0.75rem;
+  border-radius: 1rem;
 }
 .cd-headline.clip .cd-words-wrapper::after {
   display: none;
