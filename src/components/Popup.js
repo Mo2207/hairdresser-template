@@ -61,7 +61,7 @@ export const Detail = ({ isOpen4, toggleModalFour }) => {
               <i className="icon-cancel" />
             </a>
           </div>
-          <div className="description_wrap">
+          <div className="description_wrap rounded-xl">
             <div className="popup_details w-full h-auto clear-both float-left">
               <div className="top_image">
                 <img src="assets/img/thumbs/4-2.jpg" alt={true.toString()} />

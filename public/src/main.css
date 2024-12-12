@@ -194,7 +194,7 @@
     @apply fixed left-full top-0 ml-[30px] z-10;
   }
   .cavani_tm_modalbox .description_wrap {
-    @apply relative w-full h-full float-left overflow-hidden p-[50px] overflow-y-scroll;
+    @apply relative w-full h-full float-left overflow-hidden p-[50px] overflow-y-scroll rounded-xl;
   }
   .cavani_tm_modalbox .popup_details .top_image {
     @apply relative overflow-hidden mb-[37px];

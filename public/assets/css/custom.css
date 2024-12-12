@@ -357,6 +357,7 @@ body::-webkit-scrollbar-thumb {
   width: 100%;
   border: 1px solid rgba(0, 0, 0, 0.07);
   background-color: transparent;
+  border-radius: 0.75rem;
 }
 .cavani_tm_contact .form .fields ul li input:focus {
   outline: none;
@@ -370,6 +371,7 @@ body::-webkit-scrollbar-thumb {
   margin-bottom: 20px;
   background-color: transparent;
   font-size: 13px;
+  border-radius: 0.75rem;
 }
 .cavani_tm_contact .form .fields .last textarea:focus {
   outline: none;

@@ -37,7 +37,7 @@ const Layout = ({ children }) => {
         <Footer />
         {/* /FOOTER */}
         {/* MAGIC CURSOR */}
-        <Cursor />
+        {/* <Cursor /> */}
         {/* /MAGIC CURSOR */}
       </div>
     </Fragment>

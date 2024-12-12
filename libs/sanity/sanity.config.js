@@ -10,6 +10,14 @@ export default defineConfig({
 
   projectId: 'aw3v4mxg',
   dataset: 'production',
+  document: {
+    newDocumentOptions: (prev, { currentUser, creationContext }) => {
+      if (creationContext.schemaType === 'navigation') {
+        return [];
+      }
+      return prev;
+    },
+  },
 
   plugins: [structureTool(), visionTool(), richDate()],
 

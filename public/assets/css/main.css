@@ -541,7 +541,7 @@ body {
   width: 100%;
   overflow-x: hidden;
   --tw-bg-opacity: 1;
-  background-color: rgb(246 251 255 / var(--tw-bg-opacity));
+  /* background-color: rgb(246 251 255 / var(--tw-bg-opacity)); */
   font-family: Open Sans, sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -617,6 +617,7 @@ h6 {
 .cavani_tm_header .menu ul li.active a {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+  border-radius: 1rem;
 }
 
 .cavani_tm_header .menu ul li.\!active a {
@@ -737,6 +738,7 @@ h6 {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 300ms;
+  border-radius: 0.75rem;
 }
 
 .cavani_tm_button a:hover {
@@ -997,6 +999,7 @@ h6 {
   visibility: visible;
   margin-top: 0px;
   opacity: 1;
+  border-radius: 1rem;
 }
 
 .cavani_tm_modalbox .close {
@@ -1135,6 +1138,7 @@ h6 {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  border-radius: 1rem;
 }
 
 .cavani_tm_modalbox .service_popup_informations .\!image .main {
@@ -1231,6 +1235,7 @@ h6 {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  border-radius: 1rem;
 }
 
 .cavani_tm_modalbox .news_popup_informations .\!image .main {
@@ -1426,6 +1431,11 @@ h6 {
   color: rgb(58 0 255 / var(--tw-text-opacity));
 }
 
+.cavani_tm_mainpart {
+  background-color: rgb(246 251 255 / var(--tw-bg-opacity));
+  border-radius: 2rem;
+}
+
 /*---------------------------------------------------*/
 
 /*	CAVANI MEDIA QUERIES (FOR SMALL DEVICES)
@@ -1612,6 +1622,7 @@ h6 {
     padding-bottom: 20px;
     padding-left: 10px;
     padding-right: 10px;
+    border-radius: 0.75rem;
   }
 
   .cavani_tm_modalbox .box_inner {
@@ -1622,6 +1633,7 @@ h6 {
 
   .cavani_tm_modalbox .description_wrap {
     padding: 30px;
+    border-radius: 1rem;
   }
 }
 
@@ -3515,6 +3527,22 @@ h6 {
   border-radius: 9999px;
 }
 
+.rounded-xl {
+  border-radius: 1rem;
+}
+
+.rounded-2xl {
+  border-radius: 2rem;
+}
+
+.rounded-3xl {
+  border-radius: 3rem;
+}
+
+.rounded-1xl {
+  border-radius: 0.75rem;
+}
+
 .rounded-b {
   border-bottom-right-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem;
@@ -4573,6 +4601,6 @@ h6 {
   }
 
   .middle\:hidden {
-    display: none;
+    display: none !important;
   }
 }

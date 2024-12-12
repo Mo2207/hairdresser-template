@@ -5,7 +5,7 @@ const Contact = () => {
       <div className="section_inner">
         <div className="cavani_tm_contact w-full h-auto clear-both float-left mb-[100px]">
           <div className="cavani_tm_title w-full h-auto clear-both float-left overflow-hidden">
-            <span className="inline-block relative font-poppins text-[#333] uppercase font-bold tracking-[8px]">
+            <span className="inline-block relative font-poppins text-[#333] uppercase font-bold tracking-[8px] rounded-l">
               Get in Touch
             </span>
           </div>
@@ -121,7 +121,7 @@ const Contact = () => {
                     <style
                       dangerouslySetInnerHTML={{
                         __html:
-                          ".mapouter{position:relative;text-align:right;height:355px;width:100%;}",
+                          ".mapouter{position:relative;text-align:right;height:355px;width:100%;border-radius: 0.75rem;overflow: hidden}",
                       }}
                     />
                     <a href="https://www.embedgooglemap.net">

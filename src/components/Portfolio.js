@@ -225,11 +225,11 @@ const Portfolio = ({ data }) => {
                       <div className="list_inner w-full h-auto clear-both float-left relative overflow-hidden">
                         <div className="image relative">
                           <img
-                            className="relative min-w-full"
+                            className="relative min-w-full rounded-xl"
                             src={urlFor(item?.image)?.url()}
                             alt={true.toString()}
                           />
-                          <div className="details">
+                          <div className="details rounded-1xl">
                             <h3 className="text-[16px] mb-[2px] font-semibold">
                               {item.title}
                             </h3>
@@ -289,7 +289,7 @@ const Portfolio = ({ data }) => {
                   <i className="icon-cancel" />
                 </a>
               </div>
-              <div className="description_wrap">
+              <div className="description_wrap rounded-xl">
                 <div className="news_popup_informations w-full h-auto clear-both float-left">
                   {modalContent?.image && (
                     <div className="image">

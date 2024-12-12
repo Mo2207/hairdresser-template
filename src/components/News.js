@@ -7,30 +7,30 @@ import SectionContainer from "../layout/SectionContainer";
 const News = ({ data }) => {
   useEffect(() => {
     var lists = document.querySelectorAll(".news_list > ul > li");
-    let box = document.querySelector(".cavani_fn_moving_box");
-    if (!box) {
-      let body = document.querySelector("body");
-      let div = document.createElement("div");
-      div.classList.add("cavani_fn_moving_box");
-      body.appendChild(div);
-    }
+    // let box = document.querySelector(".cavani_fn_moving_box");
+    // if (!box) {
+    //   let body = document.querySelector("body");
+    //   let div = document.createElement("div");
+    //   div.classList.add("cavani_fn_moving_box");
+    //   body.appendChild(div);
+    // }
 
-    lists.forEach((list) => {
-      list.addEventListener("mouseenter", (event) => {
-        box.classList.add("opened");
-        var imgURL = list.getAttribute("data-img");
-        box.style.backgroundImage = `url(${imgURL})`;
-        box.style.top = event.clientY - 50 + "px";
+    // lists.forEach((list) => {
+    //   list.addEventListener("mouseenter", (event) => {
+    //     box.classList.add("opened");
+    //     var imgURL = list.getAttribute("data-img");
+    //     box.style.backgroundImage = `url(${imgURL})`;
+    //     box.style.top = event.clientY - 50 + "px";
 
-        if (imgURL === "") {
-          box.classList.remove("opened");
-          return false;
-        }
-      });
-      list.addEventListener("mouseleave", () => {
-        box.classList.remove("opened");
-      });
-    });
+    //     if (imgURL === "") {
+    //       box.classList.remove("opened");
+    //       return false;
+    //     }
+    //   });
+    //   list.addEventListener("mouseleave", () => {
+    //     box.classList.remove("opened");
+    //   });
+    // });
   }, []);
 
   const [isOpen4, setIsOpen4] = useState(false);
@@ -199,7 +199,7 @@ const News = ({ data }) => {
                   <i className="icon-cancel" />
                 </a>
               </div>
-              <div className="description_wrap">
+              <div className="description_wrap rounded-xl">
                 <div className="news_popup_informations w-full h-auto clear-both float-left">
                   {modalContent?.image && (
                     <div className="image">
