@@ -14,84 +14,84 @@ const Service = ({ data }) => {
 
   const services = [
     {
-      img: "assets/img/news/1.jpg",
-      icon: "assets/img/svg/3d.svg",
-      text: "Developing website involves creating your website, making it one of the most vital parts of your marketing",
-      date: "August 9, 2021",
-      title: "Eyebrow Wax",
+      img: "",
+      icon: "",
+      text: "Precision haircuts designed to suit your style and personality.",
+      date: "Updated: January 3, 2025",
+      title: "Haircuts & Styling",
       text1:
-        "Cavani is a leading web design agency with an award-winning design team that creates innovative, effective websites that capture your brand, improve your conversion rates, and maximize your revenue to help grow your business and achieve your goals.",
+        "At Aurora Hair Spa, we specialize in precision haircuts and styling that reflect your unique personality. Whether you’re looking for a classic cut or a bold new look, our experienced stylists are here to make it happen.",
       text2:
-        "In today's digital world, your website is the first interaction consumers have with your business. That's why almost 95 percent of a user's first impression relates to web design. It's also why web design services can have an immense impact on your company's bottom line.",
+        "A great haircut can transform not just your appearance but also your confidence. Let our experts help you achieve a style you’ll love.",
       text3:
-        "That's why more companies are not only reevaluating their website's design but also partnering with Kura, the web design agency that's driven more than $2.4 billion in revenue for its clients. With over 50 web design awards under our belt, we're confident we can design a custom website that drives sales for your unique business.",
+        "From consultations to finishing touches, our team ensures that every haircut and style is crafted to perfection, making you feel your absolute best.",
     },
     {
-      img: "assets/img/news/2.jpg",
-      icon: "assets/img/svg/play.svg",
-      text: "Developing website involves creating your website, making it one of the most vital parts of your marketing",
-      date: "August 9, 2021",
-      title: "Explainer Videos",
+      img: "",
+      icon: "",
+      text: "Enhance your look with vibrant color treatments and highlights.",
+      date: "Updated: January 3, 2025",
+      title: "Balayage & Highlights",
       text1:
-        "Cavani is a leading web design agency with an award-winning design team that creates innovative, effective websites that capture your brand, improve your conversion rates, and maximize your revenue to help grow your business and achieve your goals.",
+        "Our color experts are skilled in balayage, highlights, and custom color treatments to give you a radiant, natural look.",
       text2:
-        "In today's digital world, your website is the first interaction consumers have with your business. That's why almost 95 percent of a user's first impression relates to web design. It's also why web design services can have an immense impact on your company's bottom line.",
+        "Whether you want subtle highlights, vibrant tones, or full-color transformations, we ensure your hair remains healthy and beautiful throughout the process.",
       text3:
-        "That's why more companies are not only reevaluating their website's design but also partnering with Kura, the web design agency that's driven more than $2.4 billion in revenue for its clients. With over 50 web design awards under our belt, we're confident we can design a custom website that drives sales for your unique business.",
+        "Using top-quality products and personalized techniques, we create colors that enhance your features and make your hair shine.",
     },
     {
-      img: "assets/img/news/3.jpg",
-      icon: "assets/img/svg/character.svg",
-      text: "Developing website involves creating your website, making it one of the most vital parts of your marketing",
-      date: "August 9, 2021",
-      title: "App Development",
+      img: "",
+      icon: "",
+      text: "Experience the luxury of perfectly styled hair with our blowouts.",
+      date: "Updated: January 3, 2025",
+      title: "Luxury Blowouts",
       text1:
-        "Cavani is a leading web design agency with an award-winning design team that creates innovative, effective websites that capture your brand, improve your conversion rates, and maximize your revenue to help grow your business and achieve your goals.",
+        "Indulge in a salon-quality blowout that leaves your hair smooth, shiny, and styled to perfection.",
       text2:
-        "In today's digital world, your website is the first interaction consumers have with your business. That's why almost 95 percent of a user's first impression relates to web design. It's also why web design services can have an immense impact on your company's bottom line.",
+        "Whether it’s for a special occasion or just a treat for yourself, our blowouts deliver long-lasting results you’ll adore.",
       text3:
-        "That's why more companies are not only reevaluating their website's design but also partnering with Kura, the web design agency that's driven more than $2.4 billion in revenue for its clients. With over 50 web design awards under our belt, we're confident we can design a custom website that drives sales for your unique business.",
+        "With professional-grade products and tools, we ensure your blowout not only looks great but also feels amazing.",
     },
     {
-      img: "assets/img/news/4.jpg",
-      icon: "assets/img/svg/edu.svg",
-      text: "Developing website involves creating your website, making it one of the most vital parts of your marketing",
-      date: "August 9, 2021",
-      title: "Educational Video",
+      img: "",
+      icon: "",
+      text: "Smooth, frizz-free hair with our professional keratin treatments.",
+      date: "Updated: January 3, 2025",
+      title: "Keratin Treatments",
       text1:
-        "Cavani is a leading web design agency with an award-winning design team that creates innovative, effective websites that capture your brand, improve your conversion rates, and maximize your revenue to help grow your business and achieve your goals.",
+        "Tired of frizzy, unmanageable hair? Our keratin treatments restore smoothness and shine, making your hair easier to style.",
       text2:
-        "In today's digital world, your website is the first interaction consumers have with your business. That's why almost 95 percent of a user's first impression relates to web design. It's also why web design services can have an immense impact on your company's bottom line.",
+        "We use safe, effective formulas that nourish your hair while delivering long-lasting results.",
       text3:
-        "That's why more companies are not only reevaluating their website's design but also partnering with Kura, the web design agency that's driven more than $2.4 billion in revenue for its clients. With over 50 web design awards under our belt, we're confident we can design a custom website that drives sales for your unique business.",
+        "Say goodbye to frizz and hello to effortlessly smooth hair with our customized keratin services.",
     },
     {
-      img: "assets/img/news/5.jpg",
-      icon: "assets/img/svg/art.svg",
-      text: "Developing website involves creating your website, making it one of the most vital parts of your marketing",
-      date: "August 9, 2021",
-      title: "3D Game Art",
+      img: "",
+      icon: "",
+      text: "Perfect your look for your big day with our bridal hair services.",
+      date: "Updated: January 3, 2025",
+      title: "Bridal Hair Styling",
       text1:
-        "Cavani is a leading web design agency with an award-winning design team that creates innovative, effective websites that capture your brand, improve your conversion rates, and maximize your revenue to help grow your business and achieve your goals.",
+        "Your wedding day deserves a flawless hairstyle. Our bridal hair experts work closely with you to create a look that complements your gown and theme.",
       text2:
-        "In today's digital world, your website is the first interaction consumers have with your business. That's why almost 95 percent of a user's first impression relates to web design. It's also why web design services can have an immense impact on your company's bottom line.",
+        "From classic updos to modern styles, we ensure your hair is picture-perfect for the most important moments.",
       text3:
-        "That's why more companies are not only reevaluating their website's design but also partnering with Kura, the web design agency that's driven more than $2.4 billion in revenue for its clients. With over 50 web design awards under our belt, we're confident we can design a custom website that drives sales for your unique business.",
+        "We offer trial sessions to ensure your wedding day style is exactly what you envision.",
     },
     {
-      img: "assets/img/news/6.jpg",
-      icon: "assets/img/svg/presentation.svg",
-      text: "Developing website involves creating your website, making it one of the most vital parts of your marketing",
-      date: "August 9, 2021",
-      title: "Presentations",
+      img: "",
+      icon: "",
+      text: "Rejuvenate your hair and scalp with our nourishing treatments.",
+      date: "Updated: January 3, 2025",
+      title: "Scalp Treatments",
       text1:
-        "Cavani is a leading web design agency with an award-winning design team that creates innovative, effective websites that capture your brand, improve your conversion rates, and maximize your revenue to help grow your business and achieve your goals.",
+        "Healthy hair starts with a healthy scalp. Our specialized treatments cleanse, nourish, and revitalize your scalp.",
       text2:
-        "In today's digital world, your website is the first interaction consumers have with your business. That's why almost 95 percent of a user's first impression relates to web design. It's also why web design services can have an immense impact on your company's bottom line.",
+        "Whether you’re dealing with dryness, irritation, or buildup, we tailor treatments to meet your needs.",
       text3:
-        "That's why more companies are not only reevaluating their website's design but also partnering with Kura, the web design agency that's driven more than $2.4 billion in revenue for its clients. With over 50 web design awards under our belt, we're confident we can design a custom website that drives sales for your unique business.",
+        "Relax and unwind as we restore balance to your scalp, leaving your hair refreshed and ready to shine.",
     },
-  ];
+  ];  
 
   const [isOpen7, setIsOpen7] = useState(false);
   const [modalContent, setModalContent] = useState({});

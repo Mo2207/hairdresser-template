@@ -6,7 +6,7 @@ const Contact = () => {
         <div className="cavani_tm_contact w-full h-auto clear-both float-left mb-[100px]">
           <div className="cavani_tm_title w-full h-auto clear-both float-left overflow-hidden">
             <span className="inline-block relative font-poppins text-[#333] uppercase font-bold tracking-[8px] rounded-l">
-              Get in Touch
+              Get in touch
             </span>
           </div>
           <div className="short_info w-full h-auto clear-both float-left mt-[62px]">
@@ -33,7 +33,7 @@ const Contact = () => {
                       className="text-[#7d7789] transition-all duration-300 hover:text-[#333]"
                       href="#"
                     >
-                      amandatregallis@gmail.com
+                      auroraHairSpa@gmail.com
                     </a>
                   </span>
                 </div>

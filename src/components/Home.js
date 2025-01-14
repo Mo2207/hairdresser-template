@@ -44,7 +44,7 @@ const Home = () => {
           <TypingAnimation />
           <div className="cavani_tm_button transition_link relative">
             <a href="#contact" onClick={() => navChange("contact")}>
-              Book an appointment
+              Get in touch
             </a>
           </div>
         </div>

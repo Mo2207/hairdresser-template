@@ -5,12 +5,84 @@ import { Fragment, useEffect, useRef, useState } from "react";
 import SectionContainer from "../layout/SectionContainer";
 import { dataImage } from "../utils";
 import ImageView from "./ImagePopup";
-import { urlFor } from "@/libs/sanity";
+// import { urlFor } from "@/libs/sanity";
 import { Detail, Soundcloud } from "./Popup";
-import { PortableText } from "@portabletext/react";
+// import { PortableText } from "@portabletext/react";
 
-const Portfolio = ({ data }) => {
-  const categories = ['Eyebrow Wax', 'Eyebrow Tint & Shape', 'Eyebrows Lamination', 'Eyelash Lift and Tint', 'Classic Fill', 'Classic Full Set'];
+// hard-coded data for portfolio section
+const portfolioData = [
+  {
+    title: "Elegant Haircut",
+    category: "Haircuts & Styling",
+    image: "/assets/img/about/front-page-hair.jpg",
+    content: [
+      "Experience the ultimate in haircuts with our expert stylists who are dedicated to crafting the perfect style for you.",
+      "Whether you’re looking for a classic trim or a bold new look, our attention to detail ensures a result you’ll love.",
+      "Step into a world of luxury and let us transform your hairstyle with precision and care."
+    ],
+  },
+  {
+    title: "Balayage Perfection",
+    category: "Balayage & Highlights",
+    image: "",
+    content: [
+      "Achieve that sun-kissed glow with our exquisite balayage and highlighting services.",
+      "Our color specialists use advanced techniques to create a seamless, natural-looking blend of tones tailored to your style.",
+      "Let your hair shine with radiant highlights that enhance your beauty and add dimension to your look."
+    ],
+  },
+  {
+    title: "Root Touch-Up Magic",
+    category: "Root Touch-Ups",
+    image: "",
+    content: [
+      "Say goodbye to grown-out roots with our professional root touch-up services.",
+      "We match your existing color perfectly, ensuring a flawless and refreshed appearance.",
+      "Keep your hair looking polished and vibrant with our quick and effective touch-up solutions."
+    ],
+  },
+  {
+    title: "Smooth Keratin",
+    category: "Keratin Treatments",
+    image: "",
+    content: [
+      "Tame unruly hair with our transformative keratin treatments designed to leave your hair smooth and silky.",
+      "Our treatments reduce frizz, enhance shine, and improve manageability for a stunning finish.",
+      "Enjoy long-lasting results that keep your hair looking flawless, no matter the occasion."
+    ],
+  },
+  {
+    title: "Luxury Blowout",
+    category: "Luxury Blowouts",
+    image: "",
+    content: [
+      "Indulge in a luxurious blowout that leaves your hair feeling soft, bouncy, and full of life.",
+      "Our stylists use premium products and expert techniques to create a polished, long-lasting look.",
+      "Perfect for any special event or simply treating yourself to a day of pampering."
+    ],
+  },
+  {
+    title: "Bridal Elegance",
+    category: "Bridal Hair Styling",
+    image: "",
+    content: [
+      "Make your wedding day unforgettable with our bespoke bridal hair styling services.",
+      "From timeless updos to soft waves, we create a look that complements your gown and enhances your natural beauty.",
+      "Trust our experienced team to ensure your hair is picture-perfect for your special day."
+    ],
+  }
+];
+
+const Portfolio = () => {
+  const categories = [
+    "Haircuts & Styling",
+    "Balayage & Highlights",
+    "Root Touch-Ups",
+    "Keratin Treatments",
+    "Luxury Blowouts",
+    "Bridal Hair Styling"
+  ];
+
   const ModalVideo = dynamic(
     () => {
       return import("react-modal-video");
@@ -76,7 +148,7 @@ const Portfolio = ({ data }) => {
 
   const [modalContent, setModalContent] = useState({});
   const [category, setCategory] = useState(null);
-  const filteredData = category ? data.filter(item => item.category === category) : data;
+  const filteredData = category ? portfolioData.filter(item => item.category === category) : portfolioData; // replaced sanity {data} with portfolioData
   const [isOpen, setIsOpen] = useState(false);
   const [isOpen2, setIsOpen2] = useState(false);
   const [isOpen3, setIsOpen3] = useState(false);
@@ -88,6 +160,7 @@ const Portfolio = ({ data }) => {
     setIsModalOpen(!isModalOpen);
     setModalContent(value);
   }
+
   function toggleModalThree() {
     setIsOpen3(!isOpen3);
   }
@@ -226,8 +299,8 @@ const Portfolio = ({ data }) => {
                         <div className="image relative">
                           <img
                             className="relative min-w-full rounded-xl"
-                            src={urlFor(item?.image)?.url()}
-                            alt={true.toString()}
+                            src={item.image} // hard-coded image
+                            alt={item.title}
                           />
                           <div className="details rounded-1xl">
                             <h3 className="text-[16px] mb-[2px] font-semibold">
@@ -293,11 +366,13 @@ const Portfolio = ({ data }) => {
                 <div className="news_popup_informations w-full h-auto clear-both float-left">
                   {modalContent?.image && (
                     <div className="image">
-                      <img src={urlFor(modalContent?.image)?.url()} alt={true.toString()} />
+                      <img
+                      src={modalContent.image} // hard-coded image
+                      alt={modalContent.title} // hard-coded title
+                      />
                       <div
                         className="main"
-                        data-img-url={urlFor(modalContent?.image)?.url()}
-                        style={{ backgroundImage: `url(${urlFor(modalContent?.image)?.url()})` }}
+                        style={{ backgroundImage: `url(${modalContent.image})`}} // hard-coded background image
                       />
                     </div>
                   )}
@@ -311,9 +386,10 @@ const Portfolio = ({ data }) => {
                     {/* <p className="mb-[15px]">{modalContent.text1}</p>
                     <p className="mb-[15px]">{modalContent.text2}</p>
                     <p>{modalContent.text3}</p> */}
-                    <PortableText
+                    {/* <PortableText
                       value={modalContent?.content}
-                    />
+                    /> */}
+                    {modalContent.content}
                   </div>
                 </div>
               </div>
