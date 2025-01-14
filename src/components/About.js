@@ -47,29 +47,30 @@ const About = () => {
           <div className="biography w-full h-auto clear-both float-left mb-[87px]">
             <div className="cavani_tm_title w-full h-auto clear-both float-left overflow-hidden">
               <span className="inline-block relative font-poppins text-[#333] uppercase font-bold tracking-[8px]">
-                About Me
+                About us
               </span>
             </div>
             <div className="wrapper w-full h-auto clear-both float-left flex justify-between mt-[55px]">
               <div className="left w-[40%]">
                 <p className="mb-[15px]">
-                  Hello! My name is <strong>Amanda Tregallis</strong> I am a lash and brow designer. 
-                  I recently completed professional courses and am now excited to apply my newly acquired 
-                  skills in practice.
+                Welcome to <strong>Aurora Hair Spa</strong>, your sanctuary for style and relaxation. 
+                Our team of expert stylists are passionate about creating beautiful, personalized looks 
+                that celebrate your individuality and enhance your natural beauty.
                 </p>
                 <p>
-                  My goal is to help you enhance your natural beauty and create a look that perfectly 
-                  matches your style and preferences.
+                At Aurora Hair Spa, we offer a wide range of services, from precision haircuts to luxurious 
+                color treatments, all tailored to match your unique preferences. Our mission is to provide 
+                a calming, rejuvenating experience while helping you look and feel your absolute best.
                 </p>
               </div>
               <div className="right w-[50%]">
                 <ul>
-                  <li className="mb-[8px] w-full float-left flex">
+                  {/* <li className="mb-[8px] w-full float-left flex">
                     <span className="first inline-block min-w-[100px] font-bold">
                       Name:
                     </span>
                     <span className="second inline-block">Amanda Tregallis</span>
-                  </li>
+                  </li> */}
                   <li className="mb-[8px] w-full float-left flex">
                     <span className="first inline-block min-w-[100px] font-bold">
                       Address:
@@ -78,32 +79,32 @@ const About = () => {
                       22 Champlain Blvd, Dieppe, NB, CA
                     </span>
                   </li>
-                  <li className="mb-[8px] w-full float-left flex">
+                  {/* <li className="mb-[8px] w-full float-left flex">
                     <span className="first inline-block min-w-[100px] font-bold">
                       Study:
                     </span>
                     <span className="second inline-block">
                       Beauty Academy "World of Beauty"
                     </span>
-                  </li>
-                  <li className="mb-[8px] w-full float-left flex">
+                  </li> */}
+                  {/* <li className="mb-[8px] w-full float-left flex">
                     <span className="first inline-block min-w-[100px] font-bold">
                       Degree:
                     </span>
                     <span className="second inline-block">
                       Lash and Brow Designer
                     </span>
-                  </li>
+                  </li> */}
                   <li className="mb-[8px] w-full float-left flex">
                     <span className="first inline-block min-w-[100px] font-bold">
-                      Mail:
+                      Email:
                     </span>
                     <span className="second inline-block">
                       <a
                         className="text-[#7d7789] transition-all duration-300 hover:text-[#333]"
                         href="#"
                       >
-                        amandatregallis@gmail.com
+                        auroraHairSpa@gmail.com
                       </a>
                     </span>
                   </li>
