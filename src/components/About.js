@@ -131,22 +131,25 @@ const About = () => {
                 <div className="list w-full h-auto clear-both float-left mt-[55px]">
                   <ul>
                     <li className="mb-[8px] w-full float-left relative pl-[25px]">
-                      Eyebrow Wax
+                    Haircuts & Styling 
                     </li>
                     <li className="mb-[8px] w-full float-left relative pl-[25px]">
-                      Eyebrow Tint & Shape
+                    Balayage & Highlights  
                     </li>
                     <li className="mb-[8px] w-full float-left relative pl-[25px]">
-                      Eyebrows Lamination
+                    Root Touch-Ups
                     </li>
                     <li className="mb-[8px] w-full float-left relative pl-[25px]">
-                      Eyelash Lift and Tint
+                    Luxury Blowouts  
                     </li>
                     <li className="mb-[8px] w-full float-left relative pl-[25px]">
-                      Classic Fill
+                    Keratin Treatments 
                     </li>
                     <li className="mb-[8px] w-full float-left relative pl-[25px]">
-                      Classic Full Set
+                    Bridal Hair Styling 
+                    </li>
+                    <li className="mb-[8px] w-full float-left relative pl-[25px]">
+                    Scalp Treatments 
                     </li>
                   </ul>
                 </div>
@@ -160,25 +163,25 @@ const About = () => {
                 <div className="list w-full h-auto clear-both float-left mt-[55px]">
                   <ul>
                     <li className="mb-[8px] w-full float-left relative pl-[25px]">
-                      Beauty Trends
+                    Haircare Innovations 
                     </li>
                     <li className="mb-[8px] w-full float-left relative pl-[25px]">
-                      Aesthetic Design
+                    Sustainable Beauty  
                     </li>
                     <li className="mb-[8px] w-full float-left relative pl-[25px]">
-                      Client Care
+                    Client-Centered Experiences 
                     </li>
                     <li className="mb-[8px] w-full float-left relative pl-[25px]">
-                      Precision &amp; Detail
+                    Precision & Creativity  
                     </li>
                     <li className="mb-[8px] w-full float-left relative pl-[25px]">
-                      Skincare &amp; Wellness
+                    Relaxation & Wellness   
                     </li>
                     <li className="mb-[8px] w-full float-left relative pl-[25px]">
-                      Continuous Learning
+                    Transformative Style  
                     </li>
                     <li className="mb-[8px] w-full float-left relative pl-[25px]">
-                      Creative Expression
+                    Creative Expression
                     </li>
                   </ul>
                 </div>
