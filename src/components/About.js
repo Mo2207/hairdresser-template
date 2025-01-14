@@ -11,12 +11,12 @@ const About = () => {
   ];
 
   const progressBarData = [
-    { bgcolor: "#662D91", completed: 90, title: "Lash Extensions" },
-    { bgcolor: "#662D91", completed: 85, title: "Brow Shaping and Tinting" },
-    { bgcolor: "#662D91", completed: 90, title: "Lamination" },
-    { bgcolor: "#662D91", completed: 90, title: "Eyelash Lift" },
-    { bgcolor: "#662D91", completed: 80, title: "Brow Henna" },
-    { bgcolor: "#662D91", completed: 85, title: "Aftercare Consultation" },
+    { bgcolor: "#662D91", completed: 95, title: "Haircuts & Styling" },
+    { bgcolor: "#662D91", completed: 90, title: "Balayage & Highlights" },
+    { bgcolor: "#662D91", completed: 85, title: "Root Touch-Ups" },
+    { bgcolor: "#662D91", completed: 95, title: "Luxury Blowouts" },
+    { bgcolor: "#662D91", completed: 80, title: "Keratin Treatments" },
+    { bgcolor: "#662D91", completed: 85, title: "Scalp Treatments" },
   ];
 
   const services = [
@@ -244,7 +244,7 @@ const About = () => {
               </div> */}
             </div>
           </div>
-          <div className="resume w-full h-auto clear-both float-left mb-[75px]">
+          {/* <div className="resume w-full h-auto clear-both float-left mb-[75px]">
             <div className="wrapper w-full h-auto clear-both float-left flex justify-between">
               <div className="education w-[40%]">
                 <div className="cavani_tm_title w-full h-auto clear-both float-left overflow-hidden">
@@ -306,7 +306,7 @@ const About = () => {
                   </div>
                 </div>
               </div>
-              {/* <div className="experience w-1/2">
+              <div className="experience w-1/2">
                 <div className="cavani_tm_title w-full h-auto clear-both float-left overflow-hidden">
                   <span className="inline-block relative font-poppins text-[#333] uppercase font-bold tracking-[8px]">
                     Experience
@@ -365,9 +365,9 @@ const About = () => {
                     </ul>
                   </div>
                 </div>
-              </div> */}
+              </div>
             </div>
-          </div>
+          </div> */}
           {/* <div className="partners w-full h-auto clear-both float-left mb-[92px]">
             <div className="cavani_tm_title w-full h-auto clear-both float-left overflow-hidden">
               <span className="inline-block relative font-poppins text-[#333] uppercase font-bold tracking-[8px]">
