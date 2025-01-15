@@ -6,7 +6,7 @@ import { imgToSvg } from "../utils";
 import { urlFor } from "@/libs/sanity";
 import { PortableText } from "@portabletext/react";
 
-const Service = ({ data }) => {
+const Service = () => {
 
   useEffect(() => {
     imgToSvg();
@@ -112,13 +112,13 @@ const Service = ({ data }) => {
             </div>
             <div className="service_list w-full h-auto clear-both float-left mt-[60px]">
               <ul className="ml-[-50px] flex flex-wrap">
-                {data?.map((item, i) => (
+                {services?.map((item, i) => (
                   <li className="mb-[50px] w-1/2 pl-[50px]" key={i}>
                     <div className="list_inner w-full h-auto clear-both float-left relative border-solid border-[#b9b8c3] border py-[70px] px-[40px] text-center transition-all duration-300 hover:bg-[#333] rounded-xl">
                       <Image
                         // className="svg inline-block max-w-[60px] max-h-[60px] w-full h-full text-[#333] mb-[27px] transition-all duration-300"
                         className="inline-block w-[60px] h-[60px] text-[#333] mb-[27px] transition-all duration-300 mx-auto"
-                        src={urlFor(item.icon).url()}
+                        src={item.img}
                         alt={true.toString()}
                         width={60}
                         height={60}
@@ -127,7 +127,7 @@ const Service = ({ data }) => {
                         {item.title}
                       </h3>
                       <p className="text transition-all duration-300">
-                        {item.description}
+                        {item.text1}
                       </p>
                       <a
                         className="cavani_tm_full_link"
@@ -205,10 +205,8 @@ const Service = ({ data }) => {
                     {modalContent?.image && (
                       <div
                         className="main"
-                        data-img-url={urlFor(modalContent?.image)?.url()}
-                        style={{
-                          backgroundImage: `url(${urlFor(modalContent?.image)?.url()})`,
-                        }}
+                        // data-img-url={urlFor(modalContent?.image)?.url()}
+                        style={{ backgroundImage: `url(${modalContent.image})`}} // hard-coded background image
                       />
                     )}
                   </div>
@@ -216,12 +214,12 @@ const Service = ({ data }) => {
                     <h3>{modalContent.title}</h3>
                   </div>
                   <div className="descriptions w-full float-left">
-                    {/* <p className="mb-[15px]">{modalContent.text1}</p>
+                    <p className="mb-[15px]">{modalContent.text1}</p>
                     <p className="mb-[15px]">{modalContent.text2}</p>
-                    <p>{modalContent.text3}</p> */}
-                    <PortableText
+                    <p>{modalContent.text3}</p>
+                    {/* <PortableText
                       value={modalContent?.content}
-                    />
+                    /> */}
                   </div>
                 </div>
               </div>

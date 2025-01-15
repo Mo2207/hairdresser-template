@@ -290,7 +290,7 @@ const Portfolio = () => {
               </ul>
             </div>
             <div className="portfolio_list w-full h-auto clear-both float-left">
-              <ul className="gallery_zoom ml-[-50px]">
+              <ul className="flex flex-wrap">
                 {filteredData?.map((item, i) => {
                   return (
                     <li key={`portfolio-${i}`} className="youtube mb-[50px] w-1/2 float-left pl-[50px] item__">
