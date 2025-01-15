@@ -14,7 +14,7 @@ const portfolioData = [
   {
     title: "Elegant Haircut",
     category: "Haircuts & Styling",
-    image: "/assets/img/about/front-page-hair.jpg",
+    image: "/assets/img/portfolio/elegant-haircut.jpg",
     content: [
       "Experience the ultimate in haircuts with our expert stylists who are dedicated to crafting the perfect style for you.",
       "Whether you’re looking for a classic trim or a bold new look, our attention to detail ensures a result you’ll love.",
@@ -24,7 +24,7 @@ const portfolioData = [
   {
     title: "Balayage Perfection",
     category: "Balayage & Highlights",
-    image: "",
+    image: "/assets/img/portfolio/balayage-haircut.jpg",
     content: [
       "Achieve that sun-kissed glow with our exquisite balayage and highlighting services.",
       "Our color specialists use advanced techniques to create a seamless, natural-looking blend of tones tailored to your style.",
@@ -34,7 +34,7 @@ const portfolioData = [
   {
     title: "Root Touch-Up Magic",
     category: "Root Touch-Ups",
-    image: "",
+    image: "/assets/img/portfolio/root-touch-up.jpeg",
     content: [
       "Say goodbye to grown-out roots with our professional root touch-up services.",
       "We match your existing color perfectly, ensuring a flawless and refreshed appearance.",
@@ -44,7 +44,7 @@ const portfolioData = [
   {
     title: "Smooth Keratin",
     category: "Keratin Treatments",
-    image: "",
+    image: "/assets/img/portfolio/keratin-treatment.jpg",
     content: [
       "Tame unruly hair with our transformative keratin treatments designed to leave your hair smooth and silky.",
       "Our treatments reduce frizz, enhance shine, and improve manageability for a stunning finish.",
@@ -54,7 +54,7 @@ const portfolioData = [
   {
     title: "Luxury Blowout",
     category: "Luxury Blowouts",
-    image: "",
+    image: "/assets/img/portfolio/hair-blowout.jpg",
     content: [
       "Indulge in a luxurious blowout that leaves your hair feeling soft, bouncy, and full of life.",
       "Our stylists use premium products and expert techniques to create a polished, long-lasting look.",
@@ -64,7 +64,7 @@ const portfolioData = [
   {
     title: "Bridal Elegance",
     category: "Bridal Hair Styling",
-    image: "",
+    image: "/assets/img/portfolio/bridal-hair.jpg",
     content: [
       "Make your wedding day unforgettable with our bespoke bridal hair styling services.",
       "From timeless updos to soft waves, we create a look that complements your gown and enhances your natural beauty.",
