@@ -1,10 +1,59 @@
 import { Fragment, useEffect, useState } from "react";
 import Modal from "react-modal";
-import { urlFor } from "@/libs/sanity";
-import { PortableText } from "@portabletext/react";
+// import { urlFor } from "@/libs/sanity";
+// import { PortableText } from "@portabletext/react";
 import SectionContainer from "../layout/SectionContainer";
 
-const News = ({ data }) => {
+const newsData = [
+  {
+    title: "Grand Opening of Aurora Hair Spa",
+    date: "January 10, 2025",
+    tag: "Events",
+    image: "",
+    content: [
+      "We are thrilled to announce the grand opening of Aurora Hair Spa! Join us in celebrating this exciting milestone with exclusive offers and promotions.",
+      "Experience luxurious hair care and styling services designed to make you look and feel your best.",
+      "Book your appointment today and be part of the Aurora Hair Spa family!",
+    ],
+  },
+  {
+    title: "New Keratin Treatment Service",
+    date: "January 20, 2025",
+    tag: "Services",
+    image: "",
+    content: [
+      "We are excited to introduce our professional keratin treatment service, designed to leave your hair smooth, shiny, and frizz-free.",
+      "Using the latest techniques and premium products, our keratin treatments ensure long-lasting results that keep your hair looking its best.",
+      "Visit us to learn more about this transformative service and schedule your appointment today!",
+    ],
+  },
+  {
+    title: "Bridal Hair Styling Packages",
+    date: "February 1, 2025",
+    tag: "Promotions",
+    image: "",
+    content: [
+      "Your wedding day deserves nothing less than perfection! Aurora Hair Spa now offers exclusive bridal hair styling packages tailored to your needs.",
+      "From timeless updos to modern waves, our expert stylists work closely with you to create your dream look for the big day.",
+      "Contact us to book your consultation and make your wedding day truly unforgettable.",
+    ],
+  },
+  {
+    title: "Balayage & Highlights Special Offer",
+    date: "February 10, 2025",
+    tag: "Promotions",
+    image: "",
+    content: [
+      "Achieve that perfect sun-kissed glow with our limited-time offer on balayage and highlights services.",
+      "Our color specialists use advanced techniques to create natural-looking tones that complement your style.",
+      "Don’t miss this opportunity to enhance your look – book your appointment now!",
+    ],
+  },
+];
+
+
+const News = () => {
+
   useEffect(() => {
     var lists = document.querySelectorAll(".news_list > ul > li");
     // let box = document.querySelector(".cavani_fn_moving_box");
@@ -53,11 +102,11 @@ const News = ({ data }) => {
             </div>
             <div className="news_list w-full h-auto clear-both float-left mt-[60px]">
               <ul className="relative z-[2]">
-                {data?.map((item, i) => {
+                {newsData?.map((item, i) => {
                   return (
                     <li
                       className="w-full py-[29px] px-0"
-                      data-img={urlFor(item?.image)?.url()}
+                      // data-img={urlFor(item?.image)?.url()}
                       key={i}
                     >
                       <div className="list_inner w-full clear-both h-auto flex items-center">
@@ -123,11 +172,14 @@ const News = ({ data }) => {
                 <div className="news_popup_informations w-full h-auto clear-both float-left">
                   {modalContent?.image && (
                     <div className="image">
-                      <img src={urlFor(modalContent?.image)?.url()} alt={true.toString()} />
+                      <img 
+                      src={modalContent.image} 
+                      alt={true.toString()} 
+                      />
                       <div
                         className="main"
-                        data-img-url={urlFor(modalContent?.image)?.url()}
-                        style={{ backgroundImage: `url(${urlFor(modalContent?.image)?.url()})` }}
+                        // data-img-url={urlFor(modalContent?.image)?.url()}
+                        style={{ backgroundImage: `url(${modalContent.image})`}} // hard-coded background image
                       />
                     </div>
                   )}
@@ -162,9 +214,10 @@ const News = ({ data }) => {
                     {/* <p className="mb-[15px]">{modalContent.text1}</p>
                     <p className="mb-[15px]">{modalContent.text2}</p>
                     <p>{modalContent.text3}</p> */}
-                    <PortableText
+                    {/* <PortableText
                       value={modalContent?.content}
-                    />
+                    /> */}
+                    {modalContent.content};
                   </div>
                 </div>
               </div>
