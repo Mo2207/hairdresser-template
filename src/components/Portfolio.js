@@ -34,7 +34,7 @@ const portfolioData = [
   {
     title: "Root Touch-Up Magic",
     category: "Root Touch-Ups",
-    image: "/assets/img/portfolio/root-touch-up.jpeg",
+    image: "/assets/img/portfolio/hair-roots.jpg",
     content: [
       "Say goodbye to grown-out roots with our professional root touch-up services.",
       "We match your existing color perfectly, ensuring a flawless and refreshed appearance.",
