@@ -3,8 +3,8 @@ import Image from "next/image";
 import Modal from "react-modal";
 import SectionContainer from "../layout/SectionContainer";
 import { imgToSvg } from "../utils";
-import { urlFor } from "@/libs/sanity";
-import { PortableText } from "@portabletext/react";
+// import { urlFor } from "@/libs/sanity";
+// import { PortableText } from "@portabletext/react";
 
 const Service = () => {
 
