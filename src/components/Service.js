@@ -14,7 +14,7 @@ const Service = () => {
 
   const services = [
     {
-      img: "",
+      img: "/assets/img/service/scissors.svg",
       icon: "",
       text: "Precision haircuts designed to suit your style and personality.",
       date: "Updated: January 3, 2025",
@@ -27,7 +27,7 @@ const Service = () => {
         "From consultations to finishing touches, our team ensures that every haircut and style is crafted to perfection, making you feel your absolute best.",
     },
     {
-      img: "",
+      img: "/assets/img/service/highlights.svg",
       icon: "",
       text: "Enhance your look with vibrant color treatments and highlights.",
       date: "Updated: January 3, 2025",
@@ -40,7 +40,7 @@ const Service = () => {
         "Using top-quality products and personalized techniques, we create colors that enhance your features and make your hair shine.",
     },
     {
-      img: "",
+      img: "/assets/img/service/hairdryer.svg",
       icon: "",
       text: "Experience the luxury of perfectly styled hair with our blowouts.",
       date: "Updated: January 3, 2025",
@@ -53,7 +53,7 @@ const Service = () => {
         "With professional-grade products and tools, we ensure your blowout not only looks great but also feels amazing.",
     },
     {
-      img: "",
+      img: "/assets/img/service/keratin-bottle.svg",
       icon: "",
       text: "Smooth, frizz-free hair with our professional keratin treatments.",
       date: "Updated: January 3, 2025",
@@ -66,7 +66,7 @@ const Service = () => {
         "Say goodbye to frizz and hello to effortlessly smooth hair with our customized keratin services.",
     },
     {
-      img: "",
+      img: "/assets/img/service/diamond-ring.svg",
       icon: "",
       text: "Perfect your look for your big day with our bridal hair services.",
       date: "Updated: January 3, 2025",
@@ -79,7 +79,7 @@ const Service = () => {
         "We offer trial sessions to ensure your wedding day style is exactly what you envision.",
     },
     {
-      img: "",
+      img: "/assets/img/service/woman-hair.svg",
       icon: "",
       text: "Rejuvenate your hair and scalp with our nourishing treatments.",
       date: "Updated: January 3, 2025",

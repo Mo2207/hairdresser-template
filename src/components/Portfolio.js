@@ -24,7 +24,7 @@ const portfolioData = [
   {
     title: "Balayage Perfection",
     category: "Balayage & Highlights",
-    image: "/assets/img/portfolio/balayage-haircut.jpg",
+    image: "/assets/img/portfolio/balayage-hair.jpg",
     content: [
       "Achieve that sun-kissed glow with our exquisite balayage and highlighting services.",
       "Our color specialists use advanced techniques to create a seamless, natural-looking blend of tones tailored to your style.",
