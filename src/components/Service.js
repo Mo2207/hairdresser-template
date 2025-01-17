@@ -14,8 +14,8 @@ const Service = () => {
 
   const services = [
     {
-      img: "/assets/img/service/scissors.svg",
-      icon: "",
+      img: "/assets/img/service/haircutting-service.jpg",
+      icon: "/assets/img/service/scissors.svg",
       text: "Precision haircuts designed to suit your style and personality.",
       date: "Updated: January 3, 2025",
       title: "Haircuts & Styling",
@@ -27,8 +27,8 @@ const Service = () => {
         "From consultations to finishing touches, our team ensures that every haircut and style is crafted to perfection, making you feel your absolute best.",
     },
     {
-      img: "/assets/img/service/highlights.svg",
-      icon: "",
+      img: "/assets/img/service/hair-highlights-service.png",
+      icon: "/assets/img/service/highlights.svg",
       text: "Enhance your look with vibrant color treatments and highlights.",
       date: "Updated: January 3, 2025",
       title: "Balayage & Highlights",
@@ -40,8 +40,8 @@ const Service = () => {
         "Using top-quality products and personalized techniques, we create colors that enhance your features and make your hair shine.",
     },
     {
-      img: "/assets/img/service/hairdryer.svg",
-      icon: "",
+      img: "/assets/img/service/hair-blowout-service.jpg",
+      icon: "/assets/img/service/hairdryer.svg",
       text: "Experience the luxury of perfectly styled hair with our blowouts.",
       date: "Updated: January 3, 2025",
       title: "Luxury Blowouts",
@@ -53,8 +53,8 @@ const Service = () => {
         "With professional-grade products and tools, we ensure your blowout not only looks great but also feels amazing.",
     },
     {
-      img: "/assets/img/service/keratin-bottle.svg",
-      icon: "",
+      img: "/assets/img/service/keratin-service.jpg",
+      icon: "/assets/img/service/keratin-bottle.svg",
       text: "Smooth, frizz-free hair with our professional keratin treatments.",
       date: "Updated: January 3, 2025",
       title: "Keratin Treatments",
@@ -66,8 +66,8 @@ const Service = () => {
         "Say goodbye to frizz and hello to effortlessly smooth hair with our customized keratin services.",
     },
     {
-      img: "/assets/img/service/diamond-ring.svg",
-      icon: "",
+      img: "/assets/img/service/bridal-hair-service.jpg",
+      icon: "/assets/img/service/diamond-ring.svg",
       text: "Perfect your look for your big day with our bridal hair services.",
       date: "Updated: January 3, 2025",
       title: "Bridal Hair Styling",
@@ -79,8 +79,8 @@ const Service = () => {
         "We offer trial sessions to ensure your wedding day style is exactly what you envision.",
     },
     {
-      img: "/assets/img/service/woman-hair.svg",
-      icon: "",
+      img: "/assets/img/service/scalp-treatment.jpg",
+      icon: "/assets/img/service/woman-hair.svg",
       text: "Rejuvenate your hair and scalp with our nourishing treatments.",
       date: "Updated: January 3, 2025",
       title: "Scalp Treatments",
@@ -118,7 +118,7 @@ const Service = () => {
                       <Image
                         // className="svg inline-block max-w-[60px] max-h-[60px] w-full h-full text-[#333] mb-[27px] transition-all duration-300"
                         className="inline-block w-[60px] h-[60px] text-[#333] mb-[27px] transition-all duration-300 mx-auto"
-                        src={item.img}
+                        src={item.icon}
                         alt={true.toString()}
                         width={60}
                         height={60}
@@ -202,11 +202,13 @@ const Service = () => {
                 <div className="service_popup_informations w-full h-auto clear-both float-left">
                   <div className="image">
                     <img src="assets/img/thumbs/4-2.jpg" alt={true.toString()} />
-                    {modalContent?.image && (
+                    {modalContent?.img && (
                       <div
                         className="main"
                         // data-img-url={urlFor(modalContent?.image)?.url()}
-                        style={{ backgroundImage: `url(${modalContent.image})`}} // hard-coded background image
+                        style={{
+                          backgroundImage: `url(${modalContent.img})`,
+                        }} // hard-coded background image
                       />
                     )}
                   </div>
