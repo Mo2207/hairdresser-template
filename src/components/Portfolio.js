@@ -54,7 +54,7 @@ const portfolioData = [
   {
     title: "Luxury Blowout",
     category: "Luxury Blowouts",
-    image: "/assets/img/portfolio/hair-blowout.jpg",
+    image: "/assets/img/portfolio/blowout-hair.jpg",
     content: [
       "Indulge in a luxurious blowout that leaves your hair feeling soft, bouncy, and full of life.",
       "Our stylists use premium products and expert techniques to create a polished, long-lasting look.",
@@ -64,7 +64,7 @@ const portfolioData = [
   {
     title: "Bridal Elegance",
     category: "Bridal Hair Styling",
-    image: "/assets/img/portfolio/bridal-hair.jpg",
+    image: "/assets/img/portfolio/wedding-hair.jpg",
     content: [
       "Make your wedding day unforgettable with our bespoke bridal hair styling services.",
       "From timeless updos to soft waves, we create a look that complements your gown and enhances your natural beauty.",
