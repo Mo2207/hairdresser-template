@@ -6,19 +6,8 @@ import SectionContainer from "../layout/SectionContainer";
 
 const newsData = [
   {
-    title: "Grand Opening of Aurora Hair Spa",
-    date: "January 10, 2025",
-    tag: "Events",
-    image: "",
-    content: [
-      "We are thrilled to announce the grand opening of Aurora Hair Spa! Join us in celebrating this exciting milestone with exclusive offers and promotions.",
-      "Experience luxurious hair care and styling services designed to make you look and feel your best.",
-      "Book your appointment today and be part of the Aurora Hair Spa family!",
-    ],
-  },
-  {
     title: "New Keratin Treatment Service",
-    date: "January 20, 2025",
+    date: "February 20, 2025",
     tag: "Services",
     image: "",
     content: [
@@ -40,7 +29,7 @@ const newsData = [
   },
   {
     title: "Balayage & Highlights Special Offer",
-    date: "February 10, 2025",
+    date: "January 26, 2025",
     tag: "Promotions",
     image: "",
     content: [
@@ -49,6 +38,17 @@ const newsData = [
       "Don’t miss this opportunity to enhance your look – book your appointment now!",
     ],
   },
+  {
+    title: "Grand Opening of Aurora Hair Spa",
+    date: "January 9, 2025",
+    tag: "Events",
+    image: "",
+    content: [
+      "We are thrilled to announce the grand opening of Aurora Hair Spa! Join us in celebrating this exciting milestone with exclusive offers and promotions.",
+      "Experience luxurious hair care and styling services designed to make you look and feel your best.",
+      "Book your appointment today and be part of the Aurora Hair Spa family!",
+    ],
+  }
 ];
 
 
