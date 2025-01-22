@@ -114,7 +114,7 @@ const Service = () => {
               <ul className="ml-[-50px] flex flex-wrap">
                 {services?.map((item, i) => (
                   <li className="mb-[50px] w-1/2 pl-[50px]" key={i}>
-                    <div className="list_inner w-full h-auto clear-both float-left relative border-solid border-[#b9b8c3] border py-[70px] px-[40px] text-center transition-all duration-300 hover:bg-[#333] rounded-xl">
+                    <div className="list_inner w-full h-full clear-both float-left relative border-solid border-[#b9b8c3] border py-[70px] px-[40px] text-center transition-all duration-300 hover:bg-[#333] rounded-xl">
                       <Image
                         // className="svg inline-block max-w-[60px] max-h-[60px] w-full h-full text-[#333] mb-[27px] transition-all duration-300"
                         className="inline-block w-[60px] h-[60px] text-[#333] mb-[27px] transition-all duration-300 mx-auto"
