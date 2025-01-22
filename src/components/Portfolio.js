@@ -294,20 +294,22 @@ const Portfolio = () => {
                 {filteredData?.map((item, i) => {
                   return (
                     <li key={`portfolio-${i}`} className="youtube mb-[50px] w-1/2 float-left pl-[50px] item__">
-                      <button onClick={() => toggleModal(item)}>
-                      <div className="list_inner w-full h-auto clear-both float-left relative overflow-hidden">
-                        <div className="image relative">
-                          <img
-                            className="relative min-w-full rounded-xl"
-                            src={item.image} // hard-coded image
-                            alt={item.title}
-                          />
-                          <div className="details rounded-1xl">
-                            <h3 className="text-[16px] mb-[2px] font-semibold">
-                              {item.title}
-                            </h3>
+                      <button onClick={() => toggleModal(item)} className="w-full h-full">
+                      <div className="list_inner w-full h-full clear-both float-left relative overflow-hidden">
+                          <div
+                            className="image relative bg-cover bg-center rounded-xl w-full"
+                            style={{ 
+                              backgroundImage: `url(${item.image})`,
+                              height: '230px',
+                              backgroundSize: 'cover',
+                              backgroundRepeat: 'no-repeat',
+                              backgroundPosition: 'center',
+                            }}
+                          >
+                            <div className="details rounded-1xl">
+                              <h3 className="text-[16px] mb-[2px] font-semibold">{item.title}</h3>
+                            </div>
                           </div>
-                        </div>
                       </div>
                       </button>
                     </li> 
@@ -365,15 +367,15 @@ const Portfolio = () => {
               <div className="description_wrap rounded-xl">
                 <div className="news_popup_informations w-full h-auto clear-both float-left">
                   {modalContent?.image && (
-                    <div className="image">
-                      <img
-                      src={modalContent.image} // hard-coded image
-                      alt={modalContent.title} // hard-coded title
-                      />
-                      <div
-                        className="main"
-                        style={{ backgroundImage: `url(${modalContent.image})`}} // hard-coded background image
-                      />
+                    <div className="image" style={{
+                      backgroundImage: `url(${modalContent.image})`,
+                      height: '350px',
+                      backgroundSize: 'cover',
+                      backgroundRepeat: 'no-repeat',
+                      backgroundPosition: 'center',
+                      borderRadius: '20px'
+                    }} // hard-coded background image 
+                      alt={modalContent.title}>
                     </div>
                   )}
                   <div className="details">
