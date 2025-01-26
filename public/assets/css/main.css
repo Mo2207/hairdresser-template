@@ -607,11 +607,13 @@ h6 {
 .cavani_tm_header .menu ul li.mleave.active a {
   --tw-text-opacity: 1;
   color: rgb(51 51 51 / var(--tw-text-opacity));
+  border-radius: 1rem;
 }
 
 .cavani_tm_header .menu ul li.mleave.\!active a {
   --tw-text-opacity: 1;
   color: rgb(51 51 51 / var(--tw-text-opacity));
+  border-radius: 1rem;
 }
 
 .cavani_tm_header .menu ul li.active a {
@@ -623,6 +625,7 @@ h6 {
 .cavani_tm_header .menu ul li.\!active a {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+  border-radius: 1rem;
 }
 
 .cavani_tm_header .menu ul li a:hover {

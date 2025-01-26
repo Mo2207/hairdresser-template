@@ -9,6 +9,7 @@
 
 .cavani_tm_header .menu ul li a {
   position: relative;
+  border-radius: 1rem;
 }
 
 .cavani_tm_header .menu ul li a:after {
