@@ -4623,3 +4623,11 @@ h6 {
     display: none !important;
   }
 }
+
+@media (max-width: 480px) {
+
+  .box_inner {
+    max-width: 80vw;
+  }
+
+}
