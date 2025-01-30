@@ -983,11 +983,12 @@ h6 {
 .cavani_tm_modalbox .box_inner {
   visibility: hidden;
   position: absolute;
-  top: 50%;
+  top: 10%;
   left: 50%;
+  width: 80vw;
+  max-height: 80vh;
   z-index: 1;
   margin-top: -20px;
-  width: 968px;
   --tw-translate-x: -50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   --tw-bg-opacity: 1;
@@ -1003,6 +1004,10 @@ h6 {
   margin-top: 0px;
   opacity: 1;
   border-radius: 1rem;
+  top: 10%;
+  left: 50%;
+  width: 80vw;
+  max-height: 80vh;
 }
 
 .cavani_tm_modalbox .close {
@@ -1639,7 +1644,8 @@ h6 {
   .cavani_tm_modalbox .box_inner {
     top: 10%;
     left: 50%;
-    width: 750px;
+    width: 80vw;
+    max-height: 80vh;
   }
 
   .cavani_tm_modalbox .description_wrap {
@@ -1915,7 +1921,10 @@ h6 {
   }
 
   .cavani_tm_modalbox .box_inner {
-    width: 550px;
+    top: 10%;
+    left: 50%;
+    width: 80vw;
+    max-height: 80vh;
   }
 
   .cavani_tm_modalbox .description_wrap {
@@ -2043,7 +2052,8 @@ h6 {
   .cavani_tm_modalbox .box_inner {
     top: 10%;
     left: 50%;
-    width: 400px;
+    width: 90vw;
+    max-height: 80vh;
   }
 
   .cavani_tm_modalbox .close {
@@ -4627,7 +4637,15 @@ h6 {
 @media (max-width: 480px) {
 
   .box_inner {
-    max-width: 80vw;
+    top: 10%;
+    left: 50%;
+    width: 90vw;
+    max-height: 80vh;
+  }
+
+  .cavani_tm_modalbox .description_wrap {
+    overflow-y: scroll;
+    max-height: 80vh;
   }
 
 }
