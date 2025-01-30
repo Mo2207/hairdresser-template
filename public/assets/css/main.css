@@ -986,6 +986,7 @@ h6 {
   top: 10%;
   left: 50%;
   width: 80vw;
+  min-height: 70vh;
   max-height: 80vh;
   z-index: 1;
   margin-top: -20px;
@@ -1007,6 +1008,7 @@ h6 {
   top: 10%;
   left: 50%;
   width: 80vw;
+  min-height: 70vh;
   max-height: 80vh;
 }
 
@@ -1645,6 +1647,7 @@ h6 {
     top: 10%;
     left: 50%;
     width: 80vw;
+    min-height: 70vh;
     max-height: 80vh;
   }
 
@@ -1924,6 +1927,7 @@ h6 {
     top: 10%;
     left: 50%;
     width: 80vw;
+    min-height: 70vh;
     max-height: 80vh;
   }
 
@@ -2053,6 +2057,7 @@ h6 {
     top: 10%;
     left: 50%;
     width: 90vw;
+    min-height: 70vh;
     max-height: 80vh;
   }
 
@@ -4640,6 +4645,7 @@ h6 {
     top: 10%;
     left: 50%;
     width: 90vw;
+    min-height: 70vh;
     max-height: 80vh;
   }
 
