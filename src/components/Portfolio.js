@@ -367,7 +367,7 @@ const Portfolio = () => {
               <div className="description_wrap rounded-xl">
                 <div className="news_popup_informations w-full h-auto clear-both float-left">
                   {modalContent?.image && (
-                    <div className="image" style={{
+                    <div  style={{
                       backgroundImage: `url(${modalContent.image})`,
                       height: '350px',
                       backgroundSize: 'cover',
@@ -384,7 +384,7 @@ const Portfolio = () => {
                     </div>
                     <div />
                   </div>
-                  <div className="text w-full float-left">
+                  <div className="text w-full float-left overflow-y-auto">
                     {/* <p className="mb-[15px]">{modalContent.text1}</p>
                     <p className="mb-[15px]">{modalContent.text2}</p>
                     <p>{modalContent.text3}</p> */}
